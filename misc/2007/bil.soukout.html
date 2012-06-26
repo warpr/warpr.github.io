@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>right-to-left open/close paren test</title>
+    </head>
+    <body>
+        <div style="width: 30em;">
+            <p>
+            The following should read Bil Soukout (remix) in arabic, Bil Soukout is
+            &#1576;&#1575;&#1604;&#1587;&#1603;&#1608;&#1578; and remix is
+            &#1585;&#1610;&#1605;&#1603;&#1587;.
+            </p>
+            <p>
+            &#1576;&#1575;&#1604;&#1587;&#1603;&#1608;&#1578; (&#1585;&#1610;&#1605;&#1603;&#1587;)
+            </p>
+            <p>
+            remix is surrounded by open/close parentheses, browsers seem to know
+            that the open paren should be rendered right-to-left (i.e. mirrored)
+            because it is surrounded by right-to-left script.  The close paren
+            however is not followed by right-to-left script, and is often rendered
+            left-to-right, obviously this looks wrong and users will be inclined to
+            then just substitute another open parentheses, because that will look
+            like a close paren.
+            </p>
+            <p>
+            the following paragraph has the exact same content, but is forced right-to-left with a dir attribute.
+            </p>
+            <p>
+            <span dir="RTL">
+                &#1576;&#1575;&#1604;&#1587;&#1603;&#1608;&#1578; (&#1585;&#1610;&#1605;&#1603;&#1587;)
+            </span>
+            </p>
+
+            <p>
+            I have created a test track on the
+            <a href="http://musicbrainz.org/release/527b489c-6710-4b02-bd97-9ffb8c98fe1e.html">hell&oslash; again!</a> test release.  It has been
+            entered correctly with an open and a closing paren (you can check this by looking at the hexdump of the <a
+                href="http://musicbrainz.org/ws/1/track/fd4d253f-ea0f-4ba3-8e18-d861e49b06ac?type=xml">webservice</a>).  The actual
+            <a href="http://musicbrainz.org/track/01e5edba-5c8b-4290-a770-85a8ad820f48.html">track</a> has been entered incorrectly, 
+            with two open parentheses.  Again, you can check this by looking at a hexdump of the <a
+                href="http://musicbrainz.org/ws/1/track/01e5edba-5c8b-4290-a770-85a8ad820f48?type=xml">webservice</a>.
+            </p>
+        </div>
+    </body>
+</html>
+

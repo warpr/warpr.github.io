@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>frob.nl</title>
+        <style type="text/css">
+          html, body, a, div, ul, li, h1, h2 {
+              margin: 0; padding: 0; border: 0; outline: 0; font-size: 13px;
+              vertical-align: baseline; background: transparent; color: #444;
+              text-decoration: none; font-weight: normal;
+          }
+
+          * {
+              box-sizing: border-box;
+              -moz-box-sizing: border-box;
+              -webkit-box-sizing: border-box;
+          }
+
+          body {
+              background-color: #ddf;
+              background-image: url(bg.jpg);
+              background-size: cover;
+          }
+
+          ul { list-style: none; width: 100%; }
+          :focus { outline: 0; }
+
+          body { font-family: "DejaVu Sans", Verdana, Helvetica, sans-serif; }
+
+          div.links ul li {
+              text-transform: uppercase; display: inline-block; margin: 1em;
+              font-size: 12px; width: 12em; border-bottom: 4px solid #444;
+          }
+
+          div.page ul { margin-left: 1em; }
+          div.page ul li:before { content: "\25b8"; margin: 0 0.5em 0 -1em; }
+
+          h1 a, h1 { font-size: 48px; text-transform: lowercase; }
+          h2 a, h2 { font-size: 32px; }
+          h3 { font-size: 18px; border-bottom: 4px solid #444; }
+
+          div.credit, div.credit a { font-size: 12px; color: #aaa; }
+          div.lang, div.content, div.links { background: #fff; opacity: 0.8; width: 100%;}
+          div.content { overflow: hidden; margin-bottom: 10em; }
+          div.links { overflow: hidden; position: fixed; bottom: 0; left: 0; }
+          div.lang { text-align: right; padding: 0.5em 0.5em 0 0; margin-top: 10em; }
+          div.page {
+              margin: 0 2%; padding: 0 3em 3em 3em;
+              min-width: 22em; width: 28%; max-width: 32em;
+              float: left;
+          }
+
+          *[lang=en] { display: none; }
+        </style>
+        <script type="text/javascript" src="jquery.js"></script>
+    </head>
+    <body prefix="foaf: http://xmlns.com/foaf/0.1/ sioct: http://rdfs.org/sioc/types#">
+
+      <div class="credit">
+        <a href="http://www.marwei.nl/tuin/2012/2012-02/2012_02040011.JPG.html">background image</a>
+        copyright 2012 Hinke Woudt, used with permission.
+      </div>
+
+      <div class="lang">
+        <a lang="en"><img src="nl.png" alt="Nederlands" /></a>
+        <a lang="nl"><img src="en.png" alt="English" /></a>
+      </div>
+
+      <div class="content">
+
+        <div class="home page" resource="#frob.nl" typeof="foaf:Organization">
+            <h3 property="foaf:name">frob.nl</h3>
+
+          <ul>
+            <li lang="nl">Hulp nodig bij het uitbreiden van uw website?</li>
+            <li lang="en">Need help adding a new feature to your website?</li>
+            <li lang="nl">Performance problemen onderzoeken?</li>
+            <li lang="en">Debugging a performance issue?</li>
+            <li lang="nl">Uw web applicatie migreren naar een andere provider?</li>
+            <li lang="en">Migrating your web application to a new ISP?</li>
+          </ul>
+          <p lang="nl">Ik ben <a href="#contact">beschikbaar</a> voor kleine projecten.</p>
+          <p lang="en">I am <a href="#contact">available</a> for small projects.</p>
+        </div>
+
+        <div class="about page">
+          <h3 lang="en">About</h3>
+          <h3 lang="nl">Over frob.nl</h3>
+
+          <p lang="nl">frob.nl is een klein software bedrijf in Rotterdam, gerund door <a href="http://www.frob.nl/cv/">Kuno Woudt</a>.</p>
+          <p lang="en">frob.nl is a small software company in Rotterdam, run by <a href="http://www.frob.nl/cv/">Kuno Woudt</a>.</p>
+          <p lang="nl">
+            Ik richt mij op web development, met name web sites en applicaties geschreven
+            in Perl of Python i.c.m. Javascript.
+          </p>
+          <p lang="en">
+            My focus is on web development, specifically web sites and applications written
+            in Perl or Python with Javascript.
+          </p>
+        </div>
+
+        <div class="vcard page" typeof="foaf:Person" resource="#me">
+          <h3>Contact</h3>
+
+          <div class="fn" property="foaf:name">Kuno Woudt</div>
+          <div>&#x2706; <span class="tel" property="foaf:phone">+31 651 255 985</span></div>
+          <div>&#x2709; <span class="email" property="foaf:mbox" href="mailto:kuno@frob.nl">kuno@frob.nl</div>
+          <br />
+          <div class="org"><a class="url" property="foaf:homepage" href="https://frob.nl">frob.nl</a></div>
+          <div class="adr">
+            <div class="street-address">Mathenesserdijk 304B</div>
+            <div>
+              <span class="postal-code">3026 GP</span>
+              <span class="locality">Rotterdam</span>
+            </div>
+          </div>
+          <br />
+          <div>KvK: 24484040</div>
+        </div>
+
+      </div>
+
+      <div class="links" resource="#me">
+
+        <ul>
+          <li><a property="foaf:currentProject" href="https://testloop.org">testloop.org</a></li>
+          <li><a property="sioct:Microblog" href="https://micro.frob.nl">micro.frob.nl</a></li>
+          <li><a property="sioct:Microblog" href="http://twitter.com/byld">twitter</a></li>
+          <li><a property="foaf:homepage" href="https://320x200.org">320x200.org</a></li>
+        </ul>
+
+      </div>
+
+      <script type="text/javascript">
+        var lang = function(from, to) {
+            $('*[lang='+from+']').hide ();
+            $('*[lang='+to+']').fadeIn ();
+        };
+
+        $('.lang a[lang=en]').click(function () { lang('en', 'nl'); });
+        $('.lang a[lang=nl]').click(function () { lang('nl', 'en'); });
+
+        if (navigator.language && navigator.language.substring (0, 2) != 'nl')
+        {
+            $('*[lang=nl]').hide ();
+            $('*[lang=en]').show ();
+        }
+      </script>
+
+    <!-- Piwik -->
+    <script type="text/javascript">
+        var pkBaseURL = (("https:" == document.location.protocol) ? "https://frob.nl/piwik/" : "http://frob.nl/piwik/");
+        document.write(unescape("%3Cscript src='" + pkBaseURL + "piwik.js' type='text/javascript'%3E%3C/script%3E"));
+    </script>
+    <script type="text/javascript">
+        try {
+            var piwikTracker = Piwik.getTracker(pkBaseURL + "piwik.php", 1);
+            piwikTracker.trackPageView();
+            piwikTracker.enableLinkTracking();
+        } catch( err ) {}
+    </script><noscript><p><img src="http://frob.nl/piwik/piwik.php?idsite=1" style="border:0" alt="" /></p></noscript>
+    <!-- End Piwik Tracking Code -->
+
+    </body>
+</html>

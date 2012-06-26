@@ -1,0 +1,74 @@
+
+@page { 
+    size: A4;
+    margin: 2cm;
+    border: 0;
+    padding: 0;
+}
+
+div.download { display: none; }
+
+@media screen {
+
+    div.download { display: block; float: left; }
+
+    div.personal { margin-top: 5em; }
+
+    div.personal,
+    div.education,
+    div.intern,
+    div.work,
+    div.skills,
+    div.extra { margin-left: 5em; width: 50em; text-align: left; }
+
+}
+
+body {
+    font-family: arial, sans-serif;
+    font-size: 10pt;
+    color: #000000;
+    margin: 0;
+    border: 0;
+    padding: 0;
+}
+
+p.clear, h1, h2, h3, h4 { clear: both; }
+
+.download,
+.cvkuno, 
+.cvtitle { 
+    text-transform: uppercase; 
+    font-weight: bolder; 
+    margin: 0; 
+    text-align: right; 
+    font-size: 16pt; 
+}
+.cvtitle { color: #444444; font-size: 12pt; }
+.download { color: #444444; font-size: 12pt; }
+span.cvsep { color: black; }
+
+table.left { float: left; }
+table.right { margin-left: 10em; float: left; }
+td { vertical-align: top; }
+td:first-child { color: #444444; padding-right: 1em; }
+
+.outdated { display: none; }
+
+h2 { 
+    font-size: 12pt; 
+    font-weight: bolder; 
+    margin: 2em 0 1em 0; 
+    border-bottom: 1px solid #888888;
+    text-transform: uppercase; 
+}
+.cvdate { font-size: 10pt; font-weight: bolder; margin: 1em 0 0 0; }
+.cvfunc { font-size: 10pt; font-weight: normal; margin: 0; color: #444444; }
+
+li { font-weight: normal; }
+a { color: inherit; text-decoration: inherit; }
+p { font-weight: normal; font-size: 10pt; }
+p.cvjust { text-align: justify; }
+
+span.cvspan { text-align: left; }
+span.cvjust { text-align: justify; }
+
