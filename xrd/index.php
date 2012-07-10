@@ -22,7 +22,7 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
     <Link rel="salmon" href="https://micro.frob.nl/main/salmon/user/1"></Link>
     <Link rel="http://salmon-protocol.org/ns/salmon-replies" href="https://micro.frob.nl/main/salmon/user/1"></Link>
     <Link rel="http://salmon-protocol.org/ns/salmon-mention" href="https://micro.frob.nl/main/salmon/user/1"></Link>
-    <Link rel="http://schemas.google.com/g/2010#updates-from" href="https://micro.frob.nl/api/statuses/user_timeline/1.atom" type="application/atom+xml">
+    <Link rel="http://schemas.google.com/g/2010#updates-from" href="https://micro.frob.nl/api/statuses/user_timeline/1.atom" type="application/atom+xml"></Link>
     <Link rel="http://ostatus.org/schema/1.0/subscribe" template="https://micro.frob.nl/main/ostatussub?profile={uri}"></Link>
     <Link rel="http://apinamespace.org/atom" type="application/atomsvc+xml" href="https://micro.frob.nl/api/statusnet/app/service/warp.xml">
         <Property type="http://apinamespace.org/atom/username">warp</Property>
