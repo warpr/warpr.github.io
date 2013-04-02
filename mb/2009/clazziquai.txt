@@ -1,0 +1,77 @@
+Audio Format: 44100hz Stereo
+Audio Bitrate: 160kbits
+Audio Codec: MP3
+
+Number of Songs: 58
+OST Disc 1: 22
+OST Disc 2: 22
+OST Disc 3: 14
+
+Source: PSP UMD (AT3 files)
+
+~~~
+
+OST Disc 1 - Clazziquai:
+01 - Flea - Clazziquai
+02 - Come to Me - Clazziquai
+03 - Electronics - Clazziquai
+04 - Freedom - Clazziquai
+05 - Creator - Clazziquai
+06 - Love Mode - Clazziquai
+07 - Color - Clazziquai
+08 - The Night Stage - Clazziquai
+09 - Eternity - Bexter
+10 - Hard to Start - 015B
+11 - Y - ND Lee
+12 - Closer - 3rd Coast
+13 - Touch my Body - Cool's Hot Box
+14 - Tell Me - Soulman & Minos
+15 - I Want You - Lin-G
+16 - The Clear Blue Sky - Tsukasa
+17 - Melody - Bermai Izazawa
+18 - The Last Dance - Urbatronic Chopstick
+19 - Honeymoon - Humming Urban Stereo
+20 - Oblivion - ESTi
+21 - Sin - ESTi
+22 - Ask to Wind - Forte Escape
+
+OST Disc 2 - Max Emotional Sense:
+01 - First Kiss - BJJ
+02 - To You - Sweetune
+03 - Lover - ND Lee
+04 - Dark Envy - Sugar Donut
+05 - Motion - Cooly's Hot Box
+06 - Proposed, Flower, Wolf - Rex
+07 - In My Heart - Tsukasa
+08 - JBG - Croove
+09 - Coastal Tempo - 3rd Coast
+10 - No Way - 015B
+11 - Urban Night - Soulman & Minos
+12 - Here in the Moment - Ruby Tuesday
+13 - Supersonic - Planetboom
+14 - Your Own Miracle - Ruby Tuesday
+15 - Taekwonburi - xxdbxx
+16 - Blythe - M2U
+17 - Mutu - Garion
+18 - Every Morning - ND Lee
+19 - SunnySide - Croove
+20 - Memory Of Beach - M2U
+21 - DJMax - Humming Urban Stereo
+22 - Fate - ESTi
+
+OST Disc 3 - Special:
+01 - First Kiss (Extended Ver) - BJJ
+02 - Motion (Extended Ver) - Cooly's Hot Box
+03 - Hard to Start (Extended Ver) - 015B
+04 - No Way (Extended Ver) - 015B
+05 - Tell Me (Extended Ver) - Soulman & Minos
+06 - Coastal Tempo (Extended Ver) - 3rd Coast
+07 - Touch my Body (Extended Ver) - Cooly's Hot Box
+08 - Mutu (Extended Ver) - Garion
+09 - Closer (Extended Ver) - 3rd Coast
+10 - Elastic Star ~UK Garage Mix~ - ESTi
+11 - Syriana - Bexter
+12 - Play the Future - Urbatronic Chopsticks
+13 - Landscape - Tsukasa
+14 - Title BGM (Mode) - Rex
+
