@@ -1,11 +1,11 @@
 
-all: cv.pdf index.html
+all: index.html
 
 cv.pdf: cv.html resume.css
 	/opt/prince/bin/prince $<
 
 index.html: cv.html
-	cp $< $@
+	ln -s $< $@
 
 cv.fop.pdf: cv.fo
 	fop $+ $@
