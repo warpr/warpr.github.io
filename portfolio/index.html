@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kuno Woudt, portfolio</title>
+    <meta charset="utf-8" />
+
+    <script src="jquery/jquery-2.0.2.js"></script>
+    <script src="bjqs/js/bjqs-1.3.js"></script>
+    <script>
+      var timeout = 0;
+      jQuery (document).ready (function ($) {
+        $('.images').each (function (idx, element) {
+          timeout = timeout + 100;
+          var $element = $(element);
+          /* initialize each of the sliders 100ms later than the previous one,
+             so they don't all change image at the same time. */
+          setTimeout (function () {
+            $element.bjqs({
+              'width': 450,
+              'height': 255,
+              'responsive': true,
+              'animtype': 'fade',
+              'animduration': 1000,
+              'animspeed': 4000,
+              'automatic': true,
+              'showcontrols': false,
+              'showmarkers': false,
+              'keyboardnav': false,
+              'hoverpause': true,
+              'usecaptions': false,
+              'randomstart': false,
+              'responsive': true
+            });
+          }, timeout);
+        });
+      });
+    </script>
+
+
+    <link type="text/css" rel="Stylesheet" href="bjqs/bjqs.css" />
+    <style type="text/css">
+      html, body, a, div, ul, li, h1, h2 {
+        margin: 0; padding: 0; border: 0; outline: 0; font-size: 13px;
+        vertical-align: baseline; background: transparent; color: #444;
+        text-decoration: none; font-weight: normal;
+      }
+
+      * {
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+      }
+
+      body { background: #222; }
+
+      ul { list-style: none; }
+
+      body { font-family: "DejaVu Sans", Verdana, Helvetica, sans-serif; }
+      div.images { margin: 50px; }
+
+      section { border: 1px dashed red; }
+
+      div.details {
+        margin: 50px;
+        border: 1px dashed yellow;
+        width: 450px;
+        min-height: 255px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+<!--
+    <section>
+      <div class="images">
+        <ul class="bjqs">
+          <li><img src="musicbrainz.kingdom.png" /></li>
+          <li><img src="musicbrainz.kingdom.credits-inline.png" /></li>
+          <li><img src="musicbrainz.koda-kumi.edit.png" /></li>
+          <li><img src="musicbrainz.koda-kumi.json.png" /></li>
+          <li><img src="musicbrainz.koda-kumi.xml.png" /></li>
+          <li><img src="musicbrainz.coverartarchive.png" /></li>
+        </ul>
+      </div>
+    </section>
+-->
+    <section>
+      <div class="images left">
+        <ul class="bjqs">
+          <li><img src="DATAxDATA.png" /></li>
+        </ul>
+      </div>
+
+      <div class="details">
+        <span class="label">name</span> <span class="title">DATA×DATA</span><br />
+        <span class="label">url</span> <a href="https://frob.nl/DATAxDATA/">https://frob.nl/DATAxDATA/</a><br />
+        <span class="label">date</span> <span class="date">January 2013</span><br />
+        <span class="label">tech</span> <span class="tech">nodejs, mysql</span><br />
+        <span class="label">description</span>
+        <div class="description">
+          Most web analytics systems are designed to track users, which
+          raises privacy concerns. DATA×DATA is designed to only log
+          screen resolution and browser version for each page view,
+          which is what I'm interested in as a web developer.
+        </div>
+      </div>
+
+    </section>
+<!--
+    <section>
+      <div class="images right">
+        <ul class="bjqs">
+          <li><img src="autoincrement.org.png" /></li>
+          <li><img src="autoincrement.org.json.png" /></li>
+        </ul>
+      </div>
+
+      <div class="details">
+        <span class="label">name</span> <span class="title">autoincrement.org</span><br />
+        <span class="label">url</span> <a href="https://frob.nl/DATAxDATA/">http://autoincrement.org/</a><br />
+        <span class="label">date</span> <span class="date">November 2012</span><br />
+        <span class="label">tech</span> <span class="tech">haskell, mysql</span><br />
+        <span class="label">description</span>
+        <div class="description">
+          autoincrement.org is a silly domain originally intended as a
+          way to mint user-friendly identifiers for documents stored
+          in NoSQL databases which do not have an autoincrement type
+          or sequence common in SQL databases.  I now just
+          re-implement it whenever I want to learn a new web framework
+          or programming language.  Past implementations have been in
+          Python and <a href="http://opalang.org/">Opa</a>, the current version
+          is written in Haskell.
+        </div>
+      </div>
+
+    </section>
+
+    <div class="images">
+      <ul class="bjqs">
+        <li><img src="licensedb.about.png" /></li>
+        <li><img src="licensedb.agplv3.png" /></li>
+        <li><img src="licensedb.agplv3.json.png" /></li>
+        <li><img src="licensedb.agplv3.rdf.png" /></li>
+      </ul>
+    </div>
+
+    <div class="images">
+      <ul class="bjqs">
+        <li><img src="senet.org.djmax-trilogy.edit.png" /></li>
+        <li><img src="senet.org.rhythm-tengoku.edit.png" /></li>
+        <li><img src="senet.org.rhythm-tengoku.json-ld.png" /></li>
+        <li><img src="senet.org.rhythm-tengoku.png" /></li>
+      </ul>
+    </div>
+
+    <div class="images">
+      <ul class="bjqs">
+        <li><img src="testloop.teaser.png" /></li>
+        <li><img src="testloop.0.8.perl.png" /></li>
+      </ul>
+    </div>
+-->
+
+  </body>
+</html>
