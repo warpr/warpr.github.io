@@ -4,8 +4,11 @@ var $content = $('.content');
 var $sidebar = $('.sidebar');
 
 var slide_in = function (section) {
-    $sidebar.find ('ul.' + section).css ('margin-top', window.scrollY).show ();
+    $content.stop ();
+    $sidebar.stop ();
 
+    $sidebar.find ('ul').hide ();
+    $sidebar.find ('ul.' + section).css ('margin-top', window.scrollY).show ();
     $sidebar.css ('min-height', $content.height ());
 
     var empty = $('body').width () - 1050;
@@ -18,6 +21,9 @@ var slide_in = function (section) {
 };
 
 var slide_out = function (section) {
+    $content.stop ();
+    $sidebar.stop ();
+
     $content.css ('min-height', $sidebar.height ());
 
     $content.animate ({ left: 0, opacity: 1.0 }, duration);
