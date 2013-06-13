@@ -1,0 +1,7 @@
+<html>
+    <body>
+        <a href='javascript:{ var t = window.location.pathname; t = t.replace (".html", ""); window.location.href = "http://test.musicbrainz.org" + t; }'>test.musicbrainz.org</a>
+        <a href='javascript:{ var t = window.location.pathname; t = t.replace (".html", ""); window.location.href = "http://localhost:3000" + t; }'>localhost:3000</a>
+        <a href='javascript:{ var t = window.location.pathname; if (t.slice (t.length - 5, t.length) !== ".html") t = t.replace (/$/, ".html"); window.location.href = "http://musicbrainz.org" + t; }'>musicbrainz.org</a>
+    </body>
+</html>
