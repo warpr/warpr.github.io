@@ -1,0 +1,93 @@
+
+@fullwidth: 900px;
+@fullheight: 510px;
+@thumbwidth: @fullwidth / 2;
+@thumbheight: @fullheight / 2;
+@imgmargin: 16px;
+
+@background: #222;
+@margin: 50px;
+
+@headingcolor: #fff;
+@valuecolor: #fff;
+
+html, body, a, div, ul, li, h1, h2 {
+    margin: 0; padding: 0; border: 0; outline: 0; font-size: 14px;
+    vertical-align: baseline; background: transparent; color: #888;
+    text-decoration: none; font-weight: normal;
+}
+
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+ul { list-style: none; }
+
+body { font-family: "DejaVu Sans", Verdana, Helvetica, sans-serif; }
+body { background: @background; }
+
+section { clear: both; }
+
+div.sidebar, div.images { cursor: pointer; }
+
+div.images {
+    float: left;
+    margin: 0px @margin;
+    width: @thumbwidth;
+    height: @thumbheight;
+}
+
+div.details {
+    margin: @margin @margin @margin (@margin + @margin + @thumbwidth);
+    width: @thumbwidth;
+    min-height: @thumbheight;
+}
+
+div.content {
+    width: @margin + @margin + @fullwidth;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+div.sidebar {
+    position: absolute;
+    left: (0 - (@fullwidth + @imgmargin + @imgmargin));
+    top: 0;
+    margin: 0;
+    width: (@fullwidth + @imgmargin + @imgmargin);
+    background: #fff;
+    overflow: hidden;
+    z-index: 20;
+    box-shadow: 5px 5px 50px rgba(0,0,0,0.5);
+}
+div.sidebar li img {
+    margin: (@imgmargin - 1);
+    border: 1px solid #aaa;
+}
+
+
+
+h2 {
+    text-transform: uppercase;
+    color: @headingcolor;
+    font-size: 18px;
+    border-bottom: 1px solid @headingcolor;
+    margin-bottom: 1em;
+}
+
+div.description { margin-top: 1em; text-align: justify; }
+
+span.label, span.date, span.tech, a { line-height: 22px; }
+
+span.label { display: inline-block;  width: 5em; }
+span.label:after { content: ":" }
+span.date, span.tech { color: @valuecolor; }
+span.tag {
+    border-radius: 5px;
+    background: #826;
+    color: #e8c;
+    font-size: 12px;
+    padding: 2px 5px;
+}

@@ -6,3 +6,6 @@ tmp
 cv/index.html
 cv/cv.private.pdf
 cv/cv.json
+portfolio/node_modules/
+portfolio/portfolio.css
+.tern-port
