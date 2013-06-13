@@ -3,239 +3,244 @@
   <head>
     <title>Kuno Woudt, portfolio</title>
     <meta charset="utf-8" />
-
-    <script src="jquery/jquery-2.0.2.js"></script>
-    <script src="bjqs/js/bjqs-1.3.js"></script>
-    <script>
-      var timeout = 0;
-      jQuery (document).ready (function ($) {
-        $('.images').each (function (idx, element) {
-          timeout = timeout + 1000;
-          var $element = $(element);
-          /* initialize each of the sliders a bit later than the previous one,
-             so they don't all change image at the same time. */
-          setTimeout (function () {
-            $element.bjqs({
-              'width': 450,
-              'height': 255,
-              'responsive': true,
-              'animtype': 'fade',
-              'animduration': 1000,
-              'animspeed': 4000,
-              'automatic': true,
-              'showcontrols': false,
-              'showmarkers': false,
-              'keyboardnav': false,
-              'hoverpause': true,
-              'usecaptions': false,
-              'randomstart': false,
-              'responsive': true
-            });
-          }, timeout);
-        });
-      });
-    </script>
-
-
-    <link type="text/css" rel="Stylesheet" href="bjqs/bjqs.css" />
-    <style type="text/css">
-      html, body, a, div, ul, li, h1, h2 {
-        margin: 0; padding: 0; border: 0; outline: 0; font-size: 13px;
-        vertical-align: baseline; background: transparent; color: #444;
-        text-decoration: none; font-weight: normal;
-      }
-
-      * {
-        box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-      }
-
-      body { background: #222; }
-
-      ul { list-style: none; }
-
-      body { font-family: "DejaVu Sans", Verdana, Helvetica, sans-serif; }
-
-      section { clear: both; }
-      section:nth-child(even) { background: #f8a; }
-      section:nth-child(odd) { background: #a8f; }
-
-      div.images { float: left; margin: 0px 50px; width: 450px; height: 255px; }
-
-      div.details {
-        margin: 50px 50px 50px 550px;
-        width: auto;
-        min-height: 255px;
-        background: #080;
-      }
-
-    </style>
+    <meta http-equiv="refresh" content="60">
+    <link type="text/css" rel="stylesheet" href="bjqs/bjqs.css" />
+<!--
+    <link type="text/css" rel="stylesheet" href="portfolio.css" />
+-->
+    <link type="text/css" rel="stylesheet/less" href="portfolio.less" />
+    <script src="node_modules/less/dist/less-1.4.0.js"></script>
   </head>
   <body>
 
-    <section>
-      <div class="images">
-        <ul class="bjqs">
-          <li><img src="musicbrainz.kingdom.png" /></li>
-          <li><img src="musicbrainz.kingdom.credits-inline.png" /></li>
-          <li><img src="musicbrainz.koda-kumi.edit.png" /></li>
-          <li><img src="musicbrainz.koda-kumi.json.png" /></li>
-          <li><img src="musicbrainz.koda-kumi.xml.png" /></li>
-          <li><img src="musicbrainz.coverartarchive.png" /></li>
-        </ul>
-      </div>
+    <div class="sidebar">
 
-      <div class="details">
-        <span class="label">name</span> <span class="title">MusicBrainz</span><br />
-        <span class="label">url</span> <a href="https://musicbrainz.org/">https://musicbrainz.org/</a><br />
-        <span class="label">date</span> <span class="date">February 2010 &mdash; July 2013</span><br />
-        <span class="label">tech</span> <span class="tech">perl, javascript, postgresql, ...</span><br />
-        <span class="label">description</span>
-        <div class="description">
-          MusicBrainz is a community-maintained open source
-          encyclopedia of music information.  As a contractor on
-          MusicBrainz I've mostly worked on the musicbrainz.org server
-          software, which is written in perl using the Catalyst
-          framework.  Some of the data entry screens use javascript
-          with jQuery and Knockout.  The main site uses PostgreSQL as
-          the back-end database and a lucene based search server
-          written in java.
+      <ul class="musicbrainz">
+        <li><img src="musicbrainz.kingdom.png" /></li>
+        <li><img src="musicbrainz.kingdom.credits-inline.png" /></li>
+        <li><img src="musicbrainz.koda-kumi.edit.png" /></li>
+        <li><img src="musicbrainz.koda-kumi.json.png" /></li>
+        <li><img src="musicbrainz.koda-kumi.xml.png" /></li>
+        <li><img src="musicbrainz.coverartarchive.png" /></li>
+      </ul>
+
+      <ul class="data-x-data">
+        <li><img src="DATAxDATA.png" /></li>
+      </ul>
+
+      <ul class="autoincrement">
+        <li><img src="autoincrement.org.png" /></li>
+        <li><img src="autoincrement.org.json.png" /></li>
+      </ul>
+
+      <ul class="licensedb">
+        <li><img src="licensedb.about.png" /></li>
+        <li><img src="licensedb.agplv3.png" /></li>
+        <li><img src="licensedb.agplv3.json.png" /></li>
+        <li><img src="licensedb.agplv3.rdf.png" /></li>
+      </ul>
+
+      <ul class="senet">
+        <li><img src="senet.org.djmax-trilogy.edit.png" /></li>
+        <li><img src="senet.org.rhythm-tengoku.edit.png" /></li>
+        <li><img src="senet.org.rhythm-tengoku.json-ld.png" /></li>
+        <li><img src="senet.org.rhythm-tengoku.png" /></li>
+      </ul>
+
+      <ul class="testloop">
+        <li><img src="testloop.teaser.png" /></li>
+        <li><img src="testloop.0.8.perl.png" /></li>
+      </ul>
+
+    </div>
+
+    <div class="content">
+
+      <section class="musicbrainz">
+        <div class="images">
+          <ul class="bjqs">
+            <li><img src="musicbrainz.kingdom.png" /></li>
+            <li><img src="musicbrainz.kingdom.credits-inline.png" /></li>
+            <li><img src="musicbrainz.koda-kumi.edit.png" /></li>
+            <li><img src="musicbrainz.koda-kumi.json.png" /></li>
+            <li><img src="musicbrainz.koda-kumi.xml.png" /></li>
+            <li><img src="musicbrainz.coverartarchive.png" /></li>
+          </ul>
         </div>
-      </div>
-    </section>
 
-    <section>
-      <div class="images">
-        <ul class="bjqs">
-          <li><img src="DATAxDATA.png" /></li>
-        </ul>
-      </div>
+        <div class="details">
+          <h2>MusicBrainz</h2>
+          <span class="label">date</span> <span class="date">February 2010 &mdash; July 2013</span><br />
+          <span class="label">url</span> <a href="https://musicbrainz.org/">https://musicbrainz.org/</a><br />
+          <span class="label">tech</span>
+          <span class="tag">perl</span>
+          <span class="tag">javascript</span>
+          <span class="tag">postgresql</span><br />
 
-      <div class="details">
-        <span class="label">name</span> <span class="title">DATA×DATA</span><br />
-        <span class="label">url</span> <a href="https://frob.nl/DATAxDATA/">https://frob.nl/DATAxDATA/</a><br />
-        <span class="label">date</span> <span class="date">January 2013</span><br />
-        <span class="label">tech</span> <span class="tech">nodejs, mysql</span><br />
-        <span class="label">description</span>
-        <div class="description">
-          Most web analytics systems are designed to track users, which
-          raises privacy concerns. DATA×DATA is designed to only log
-          screen resolution and browser version for each page view,
-          which is what I'm interested in as a web developer.
+          <div class="description">
+            MusicBrainz is a community-maintained open source
+            encyclopedia of music information.  As a contractor on
+            MusicBrainz I've mostly worked on the musicbrainz.org server
+            software, which is written in perl using the Catalyst
+            framework.  Some of the data entry screens use javascript
+            with jQuery and Knockout.  The main site uses PostgreSQL as
+            the back-end database and a lucene based search server
+            written in java.
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="images right">
-        <ul class="bjqs">
-          <li><img src="autoincrement.org.png" /></li>
-          <li><img src="autoincrement.org.json.png" /></li>
-        </ul>
-      </div>
-
-      <div class="details">
-        <span class="label">name</span> <span class="title">autoincrement.org</span><br />
-        <span class="label">url</span> <a href="https://frob.nl/DATAxDATA/">http://autoincrement.org/</a><br />
-        <span class="label">date</span> <span class="date">November 2012</span><br />
-        <span class="label">tech</span> <span class="tech">haskell, mysql</span><br />
-        <span class="label">description</span>
-        <div class="description">
-          autoincrement.org is a silly domain originally intended as a
-          way to mint user-friendly identifiers for documents stored
-          in NoSQL databases which do not have an autoincrement type
-          or sequence common in SQL databases.  I now just
-          re-implement it whenever I want to learn a new web framework
-          or programming language.  Past implementations have been in
-          Python and <a href="http://opalang.org/">Opa</a>, the current version
-          is written in Haskell.
+      <section class="data-x-data">
+        <div class="images">
+          <ul class="bjqs">
+            <li><img src="DATAxDATA.png" /></li>
+          </ul>
         </div>
-      </div>
-    </section>
 
-    <section>
-      <div class="images">
-        <ul class="bjqs">
-          <li><img src="licensedb.about.png" /></li>
-          <li><img src="licensedb.agplv3.png" /></li>
-          <li><img src="licensedb.agplv3.json.png" /></li>
-          <li><img src="licensedb.agplv3.rdf.png" /></li>
-        </ul>
-      </div>
+        <div class="details">
+          <h2>DATA×DATA</h2>
+          <span class="label">date</span> <span class="date">January 2013</span><br />
+          <span class="label">url</span> <a href="https://frob.nl/DATAxDATA/">https://frob.nl/DATAxDATA/</a><br />
+          <span class="label">tech</span>
+          <span class="tag">nodejs</span>
+          <span class="tag">mysql</span><br />
 
-      <div class="details">
-        <span class="label">name</span> <span class="title">LicenseDB</span><br />
-        <span class="label">url</span> <a href="https://licensedb.org/">https://licensedb.org/</a><br />
-        <span class="label">date</span> <span class="date">February 2012 &mdash;</span><br />
-        <span class="label">tech</span> <span class="tech">RDF, node.js, PHP, Python</span><br />
-        <span class="label">description</span>
-        <div class="description">
-          The License Database is intended to be a metadata database
-          about open source / free software / free culture copyright
-          licenses.  The database is implemented as a set of git
-          versioned turtle files, from which HTML/RDFa, RDF/XML and
-          JSON-LD files are generated.  A hodge podge of scripts glue
-          everything together.  I would like to reimplement all of
-          this in a more coherent manner.
+          <div class="description">
+            Most web analytics systems are designed to track users, which
+            raises privacy concerns. DATA×DATA is designed to only log
+            screen resolution and browser version for each page view,
+            which is what I'm interested in as a web developer.
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section>
-      <div class="images">
-        <ul class="bjqs">
-          <li><img src="senet.org.djmax-trilogy.edit.png" /></li>
-          <li><img src="senet.org.rhythm-tengoku.edit.png" /></li>
-          <li><img src="senet.org.rhythm-tengoku.json-ld.png" /></li>
-          <li><img src="senet.org.rhythm-tengoku.png" /></li>
-        </ul>
-      </div>
-
-      <div class="details">
-        <span class="label">name</span> <span class="title">senet.org</span><br />
-        <span class="label">url</span> <a href="https://gitorious.org/senet/">https://gitorious.org/senet/</a><br />
-        <span class="label">date</span> <span class="date">April 2012 &mdash; October 2012 (unfinished)</span><br />
-        <span class="label">tech</span> <span class="tech">RDF, Javascript, Python, CouchDB</span><br />
-        <span class="label">description</span>
-        <div class="description">
-          senet.org is intended to be a metadata database about
-          videogames.  This project was largely about experimenting
-          with RDF, so storing data in the database in way that makes
-          it accessible for webservice clients as e.g. RDF/XML or
-          JSON-LD or for website visitors as RDFa.  But more
-          importantly trying to express with RDF how a data entry form
-          should be rendered and validated.
+      <section class="autoincrement">
+        <div class="images right">
+          <ul class="bjqs">
+            <li><img src="autoincrement.org.png" /></li>
+            <li><img src="autoincrement.org.json.png" /></li>
+          </ul>
         </div>
-      </div>
-    </section>
 
-    <section>
-      <div class="images">
-        <ul class="bjqs">
-          <li><img src="testloop.teaser.png" /></li>
-          <li><img src="testloop.0.8.perl.png" /></li>
-        </ul>
-      </div>
+        <div class="details">
+          <h2>autoincrement.org</h2>
+          <span class="label">date</span> <span class="date">November 2012</span><br />
+          <span class="label">url</span> <a href="https://frob.nl/DATAxDATA/">http://autoincrement.org/</a><br />
+          <span class="label">tech</span>
+          <span class="tag">haskell</span>
+          <span class="tag">mysql</span><br />
 
-      <div class="details">
-        <span class="label">name</span> <span class="title">Testloop</span><br />
-        <span class="label">url</span> <a href="https://testloop.org/">https://testloop.org/</a><br />
-        <span class="label">date</span> <span class="date">August 2011 &mdash; April 2012</span><br />
-        <span class="label">tech</span> <span class="tech">Python Qt</span><br />
-        <span class="label">description</span>
-        <div class="description">
-          testloop was intended to GUI testrunner based around the
-          idea of continuous testing.  The idea is to use per-test
-          coverage data to predict which tests will likely fail after
-          a particular change to the source tree, and then instantly
-          run those tests instead of simply running the entire test
-          suite continuously.  I got this to a proof-of-concept stage
-          but then abandoned it, as continuous integration tools like
-          jenkins are often Good Enough.
+          <div class="description">
+            autoincrement.org is a silly domain originally intended as a
+            way to mint user-friendly identifiers for documents stored
+            in NoSQL databases which do not have an autoincrement type
+            or sequence common in SQL databases.  I now just
+            re-implement it whenever I want to learn a new web framework
+            or programming language.  Past implementations have been in
+            Python and <a href="http://opalang.org/">Opa</a>, the current version
+            is written in Haskell.
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section class="licensedb">
+        <div class="images">
+          <ul class="bjqs">
+            <li><img src="licensedb.about.png" /></li>
+            <li><img src="licensedb.agplv3.png" /></li>
+            <li><img src="licensedb.agplv3.json.png" /></li>
+            <li><img src="licensedb.agplv3.rdf.png" /></li>
+          </ul>
+        </div>
+
+        <div class="details">
+          <h2>LicenseDB</h2>
+          <span class="label">date</span> <span class="date">February 2012 &mdash;</span><br />
+          <span class="label">url</span> <a href="https://licensedb.org/">https://licensedb.org/</a><br />
+          <span class="label">tech</span>
+          <span class="tag">RDF</span>
+          <span class="tag">node.js</span>
+          <span class="tag">Python</span>
+          <span class="tag">PHP</span><br />
+
+          <div class="description">
+            The License Database is intended to be a metadata database
+            about open source / free software / free culture copyright
+            licenses.  The database is implemented as a set of git
+            versioned turtle files, from which HTML/RDFa, RDF/XML and
+            JSON-LD files are generated.  A hodge podge of scripts glue
+            everything together.  I would like to reimplement all of
+            this in a more coherent manner.
+          </div>
+        </div>
+      </section>
+
+      <section class="senet">
+        <div class="images">
+          <ul class="bjqs">
+            <li><img src="senet.org.djmax-trilogy.edit.png" /></li>
+            <li><img src="senet.org.rhythm-tengoku.edit.png" /></li>
+            <li><img src="senet.org.rhythm-tengoku.json-ld.png" /></li>
+            <li><img src="senet.org.rhythm-tengoku.png" /></li>
+          </ul>
+        </div>
+
+        <div class="details">
+          <h2>senet.org</h2>
+          <span class="label">date</span> <span class="date">April 2012 &mdash; October 2012 (unfinished)</span><br />
+          <span class="label">url</span> <a href="https://gitorious.org/senet/">https://gitorious.org/senet/</a><br />
+          <span class="label">tech</span>
+          <span class="tag">RDF</span>
+          <span class="tag">Javascript</span>
+          <span class="tag">Python</span>
+          <span class="tag">CouchDB</span><br />
+
+          <div class="description">
+            senet.org is intended to be a metadata database about
+            videogames.  This project was largely about experimenting
+            with RDF, so storing data in the database in way that makes
+            it accessible for webservice clients as e.g. RDF/XML or
+            JSON-LD or for website visitors as RDFa.  But more
+            importantly trying to express with RDF how a data entry form
+            should be rendered and validated.
+          </div>
+        </div>
+      </section>
+
+      <section class="testloop">
+        <div class="images">
+          <ul class="bjqs">
+            <li><img src="testloop.teaser.png" /></li>
+            <li><img src="testloop.0.8.perl.png" /></li>
+          </ul>
+        </div>
+
+        <div class="details">
+          <h2>Testloop</h2>
+          <span class="label">date</span> <span class="date">August 2011 &mdash; April 2012</span><br />
+          <span class="label">url</span> <a href="https://testloop.org/">https://testloop.org/</a><br />
+          <span class="label">tech</span>
+          <span class="tag">Python</span>
+          <span class="tag">Qt</span><br />
+
+          <div class="description">
+            testloop was intended to GUI testrunner based around the
+            idea of continuous testing.  The idea is to use per-test
+            coverage data to predict which tests will likely fail after
+            a particular change to the source tree, and then instantly
+            run those tests instead of simply running the entire test
+            suite continuously.  I got this to a proof-of-concept stage
+            but then abandoned it, as continuous integration tools like
+            jenkins are often Good Enough.
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <script src="jquery/jquery-2.0.2.js"></script>
+    <script src="bjqs/js/bjqs-1.3.js"></script>
+    <script src="portfolio.js"></script>
 
   </body>
 </html>
