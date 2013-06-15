@@ -17,11 +17,16 @@
 
 @sans-serif: Verdana, Helvetica, sans-serif;
 @serif: 'Times New Roman', Times, serif;
+@basesize: 14px;
+@introsize: 18px;
+@h1size: 44px;
+@h2size: 36px;
+@tagsize: 12px;
 
 html, body, a, div, ul, li, h1, h2 {
-    margin: 0; padding: 0; border: 0; outline: 0; font-size: 14px;
-    vertical-align: baseline; background: transparent; color: @textcolor;
-    text-decoration: none; font-weight: normal;
+    background: transparent; border: 0; color: @textcolor;
+    font-size: @basesize; font-weight: normal; margin: 0; outline: 0;
+    padding: 0; text-decoration: none;vertical-align: baseline;
 }
 
 * {
@@ -31,24 +36,35 @@ html, body, a, div, ul, li, h1, h2 {
 }
 
 ul { list-style: none; }
+a { color: @headingcolor; font-family: inherit; font-size: inherit; }
 
 body { font-family: @sans-serif; }
 body { background: @background; }
 
-div.content > p {
+div.content > footer,
+div.content > footer a { font-family: @sans-serif; }
+div.content > footer {
+    border-top: 1px solid @textcolor;
+    margin: 0 50px;
+    min-height: 80px;
+}
+div.content > footer p.copyright { float: left; }
+div.content > footer p.links { float: right; }
+div.content > footer p.links a { padding: 0 0.3em; }
+
+header {
     color: @headingcolor;
     font-family: @serif;
-    font-size: 16px;
+    font-size: @introsize;
     margin: 1em auto;
     text-align: center;
     width: 24em;
 }
 
-div.content > p a { color: @headingcolor; font-family: inherit; font-size: inherit; }
 p.sign { padding-left: 11em; }
+div.spacer { font-size: @h2size; margin: 0 auto; text-align: center; }
 
 section { clear: both; margin: 100px 0; }
-div.spacer { margin: 0 auto; text-align: center; font-size: 36px; }
 
 section:nth-child(odd) div.images { float: left; }
 section:nth-child(even) div.images { float: right; }
@@ -60,14 +76,14 @@ div.sidebar, div.images { cursor: pointer; }
 
 div.images {
     margin: 0px @margin;
-    width: @thumbwidth;
     height: @thumbheight;
+    width: @thumbwidth;
 }
 
 div.details {
     margin: 0px @margin @margin @margin;
-    width: @thumbwidth;
     min-height: @thumbheight;
+    width: @thumbwidth;
     position: relative;
 }
 
@@ -76,6 +92,7 @@ div.attributes {
     bottom: 0;
     left: 0;
 }
+div.attributes a { color: @textcolor; }
 
 div.content {
     width: @margin + @margin + @margin + @fullwidth;
@@ -85,52 +102,52 @@ div.content {
 }
 
 div.sidebar {
+    background: @sidebar-bg;
+    box-shadow: 5px 5px 50px rgba(0,0,0,0.5);
+    width: (@fullwidth + @imgmargin + @imgmargin);
+    margin: 0;
     position: absolute;
     left: (0 - (@fullwidth + @imgmargin + @imgmargin));
     top: 0;
-    margin: 0;
-    width: (@fullwidth + @imgmargin + @imgmargin);
-    background: @sidebar-bg;
     overflow: hidden;
     z-index: 20;
-    box-shadow: 5px 5px 50px rgba(0,0,0,0.5);
 }
 div.sidebar li img {
-    margin: (@imgmargin - 1);
     border: 1px solid @sidebar-img-border;
+    margin: (@imgmargin - 1);
 }
 
 h1 {
     color: @headingcolor;
-    font-weight: 100;
-    font-size: 44px;
-    margin: 50px;
     font-family: @serif;
+    font-size: @h1size;
+    font-weight: 100;
     letter-spacing: 0.2em;
+    margin: 50px;
     text-align: center;
 }
 
 h2 {
-    text-align: center;
-    font-family: @serif;
     color: @headingcolor;
-    font-size: 36px;
+    font-family: @serif;
+    font-size: @h2size;
     font-style: italic;
     margin-bottom: 1em;
+    text-align: center;
 }
 
 div.description { margin: 1em 0; text-align: justify; }
 
 span.label, span.date, span.tech, a { line-height: 22px; }
 
-span.label { display: inline-block;  width: 5em; }
+span.label { display: inline-block; width: 5em; }
 span.label:after { content: ":" }
 span.date, span.tech { color: @valuecolor; }
 span.tag {
-    border-radius: 5px;
     background: #826;
+    border-radius: 5px;
     color: #e8c;
-    font-size: 12px;
+    font-size: @tagsize;
     padding: 2px 5px;
 }
 

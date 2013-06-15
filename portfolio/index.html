@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Kuno Woudt, portfolio</title>
+    <title>Kuno Woudt, Portfolio</title>
     <meta charset="utf-8" />
     <link type="text/css" rel="stylesheet" href="bjqs/bjqs.css" />
     <link type="text/css" rel="stylesheet" href="portfolio.css" />
@@ -66,18 +66,19 @@
 
     <div class="content">
 
-      <h1>Portfolio</h1>
-
-      <p>
-        I am a web developer based in Rotterdam.
-      </p>
-      <p>
-        This page contains examples of my <a href="#work">professional work</a>
-        and <a href="#side">side projects</a> I have worked on in the past few years.
-      </p>
-      <p class="sign">
-        &#x301C; <a href="https://frob.nl/cv/">Kuno Woudt</a>
-      </p>
+      <header>
+        <h1>Portfolio</h1>
+        <p>
+          I am a web developer based in Rotterdam.
+        </p>
+        <p>
+          This page contains examples of my <a href="#work">professional work</a>
+          and <a href="#side">side projects</a> I have worked on in the past few years.
+        </p>
+        <p class="sign">
+          &#x301C; <a href="https://frob.nl/cv/">Kuno Woudt</a>.
+        </p>
+      </header>
 
       <a id="work"></a>
       <section class="musicbrainz">
@@ -95,23 +96,30 @@
 
         <div class="details">
           <div class="description">
-            MusicBrainz is a community-maintained open source
-            encyclopedia of music information.  As a contractor on
-            MusicBrainz I've mostly worked on the musicbrainz.org server
-            software, which is written in perl using the Catalyst
-            framework.  Some of the data entry screens use javascript
-            with jQuery and Knockout.  The main site uses PostgreSQL as
-            the back-end database and a lucene based search server
-            written in java.
+            <p>
+              <a href="https://musicbrainz.org">MusicBrainz</a> is a
+              community-maintained open source database of music
+              information.
+            </p>
+            <p>
+              As a contractor on MusicBrainz I've mostly
+              worked on the musicbrainz.org server software, which is
+              written in perl using the Catalyst framework.  Some of
+              the data entry screens use javascript with jQuery and
+              Knockout.  The main site uses PostgreSQL as the back-end
+              database and a lucene based search server written in
+              java.
+            </p>
           </div>
 
           <div class="attributes">
             <span class="label">date</span> <span class="date">February 2010 &mdash; July 2013</span><br />
-            <span class="label">url</span> <a href="https://musicbrainz.org/">https://musicbrainz.org/</a><br />
+            <span class="label">code</span> <a href="https://github.com/metabrainz/musicbrainz-server/">https://github.com/metabrainz/musicbrainz-server/</a><br />
             <span class="label">tech</span>
-            <span class="tag">perl</span>
-            <span class="tag">javascript</span>
-            <span class="tag">postgresql</span>
+            <span class="tag">Perl</span>
+            <span class="tag">Javascript</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Catalyst</span>
           </div>
         </div>
       </section>
@@ -145,7 +153,7 @@
 
           <div class="attributes">
             <span class="label">date</span> <span class="date">May 2006 &mdash; January 2010</span><br />
-            <span class="label">url</span> <a href="http://quaestio.com/">http://quaestio.com/</a><br />
+            <span class="label">home</span> <a href="http://quaestio.com/">http://quaestio.com/</a><br />
             <span class="label">tech</span>
             <span class="tag">PHP</span>
             <span class="tag">Javascript</span>
@@ -171,18 +179,21 @@
 
         <div class="details">
           <div class="description">
-            The License Database is intended to be a metadata database
-            about open source / free software / free culture copyright
-            licenses.  The database is implemented as a set of git
-            versioned turtle files, from which HTML/RDFa, RDF/XML and
-            JSON-LD files are generated.  A hodge podge of scripts glue
-            everything together.  I would like to reimplement all of
-            this in a more coherent manner.
+            <p>
+              <a href="https://licensedb.org">The License Database</a>
+              is intended to be a metadata database about open source
+              / free software / free culture copyright licenses.  The
+              database is implemented as a set of git versioned turtle
+              files, from which HTML/RDFa, RDF/XML and JSON-LD files
+              are generated.  A hodge podge of scripts glue everything
+              together.  I would like to reimplement all of this in a
+              more coherent manner.
+            </p>
           </div>
 
           <div class="attributes">
             <span class="label">date</span> <span class="date">February 2012 &mdash;</span><br />
-            <span class="label">url</span> <a href="https://licensedb.org/">https://licensedb.org/</a><br />
+            <span class="label">code</span> <a href="https://gitorious.org/licensedb/licensedb/">https://gitorious.org/licensedb/licensedb/</a><br />
             <span class="label">tech</span>
             <span class="tag">RDF</span>
             <span class="tag">node.js</span>
@@ -222,7 +233,7 @@
 
           <div class="attributes">
             <span class="label">date</span> <span class="date">January 2013, May 2013</span><br />
-            <span class="label">url</span> <a href="https://github.com/warpr/databank-couchdb/">https://github.com/warpr/databank-couchdb/</a><br />
+            <span class="label">code</span> <a href="https://github.com/warpr/databank-couchdb/">https://github.com/warpr/databank-couchdb/</a><br />
             <span class="label">tech</span>
             <span class="tag">node.js</span>
             <span class="tag">Javascript</span>
@@ -241,15 +252,19 @@
 
         <div class="details">
           <div class="description">
-            Most web analytics systems are designed to track users, which
-            raises privacy concerns. DATA×DATA is designed to only log
-            screen resolution and browser version for each page view,
-            which is what I'm interested in as a web developer.
+            <p>
+              Most web analytics systems are designed to track users,
+              which raises privacy
+              concerns. <a href="https://frob.nl/DATAxDATA/">DATA×DATA</a>
+              is designed to only log screen resolution and browser
+              version for each page view, which is what I'm interested
+              in as a web developer.
+            </p>
           </div>
 
           <div class="attributes">
             <span class="label">date</span> <span class="date">January 2013</span><br />
-            <span class="label">url</span> <a href="https://frob.nl/DATAxDATA/">https://frob.nl/DATAxDATA/</a><br />
+            <span class="label">code</span> <a href="https://gitorious.org/data-x-data/">https://gitorious.org/data-x-data/</a><br />
             <span class="label">tech</span>
             <span class="tag">node.js</span>
             <span class="tag">Javascript</span>
@@ -271,18 +286,21 @@
 
         <div class="details">
           <div class="description">
-            senet.org is intended to be a metadata database about
-            videogames.  This project was largely about experimenting
-            with RDF, so storing data in the database in way that makes
-            it accessible for webservice clients as e.g. RDF/XML or
-            JSON-LD or for website visitors as RDFa.  But more
-            importantly trying to express with RDF how a data entry form
-            should be rendered and validated.
+            <p>
+              <a href="https://senet.org">senet.org</a> is intended to
+              be a metadata database about videogames.  This project
+              was largely about experimenting with RDF, so storing
+              data in the database in way that makes it accessible for
+              webservice clients as e.g. RDF/XML or JSON-LD or for
+              website visitors as RDFa.  But more importantly trying
+              to express with RDF how a data entry form should be
+              rendered and validated.
+            </p>
           </div>
 
           <div class="attributes">
             <span class="label">date</span> <span class="date">April 2012 &mdash; October 2012 (unfinished)</span><br />
-            <span class="label">url</span> <a href="https://gitorious.org/senet/">https://gitorious.org/senet/</a><br />
+            <span class="label">code</span> <a href="https://gitorious.org/senet/">https://gitorious.org/senet/</a><br />
             <span class="label">tech</span>
             <span class="tag">RDF</span>
             <span class="tag">Javascript</span>
@@ -303,19 +321,25 @@
 
         <div class="details">
           <div class="description">
-            autoincrement.org is a silly domain originally intended as a
-            way to mint user-friendly identifiers for documents stored
-            in NoSQL databases which do not have an autoincrement type
-            or sequence common in SQL databases.  I now just
-            re-implement it whenever I want to learn a new web framework
-            or programming language.  Past implementations have been in
-            Python and <a href="http://opalang.org/">Opa</a>, the current version
-            is written in Haskell.
+            <p>
+              <a href="http://autoincrement.org">autoincrement.org</a>
+              is a silly domain originally intended as a way to mint
+              user-friendly identifiers for documents stored in NoSQL
+              databases which do not have an autoincrement type or
+              sequence common in SQL databases.
+            </p>
+            <p>
+              Now it is the simplest first thing I implement whenever
+              I want to learn a new web framework or programming
+              language.  Past implementations have been in Python and
+              <a href="http://opalang.org/">Opa</a>, the current
+              version is written in Haskell.
+            </p>
           </div>
 
           <div class="attributes">
             <span class="label">date</span> <span class="date">November 2012</span><br />
-            <span class="label">url</span> <a href="https://frob.nl/DATAxDATA/">http://autoincrement.org/</a><br />
+            <span class="label">code</span> <a href="https://gitorious.org/warpr/autoincrement/">https://gitorious.org/warpr/autoincrement/</a><br />
             <span class="label">tech</span>
             <span class="tag">Haskell</span>
             <span class="tag">MySQL</span>
@@ -334,25 +358,40 @@
 
         <div class="details">
           <div class="description">
-            testloop was intended to GUI testrunner based around the
-            idea of continuous testing.  The idea is to use per-test
-            coverage data to predict which tests will likely fail after
-            a particular change to the source tree, and then instantly
-            run those tests instead of simply running the entire test
-            suite continuously.  I got this to a proof-of-concept stage
-            but then abandoned it, as continuous integration tools like
-            jenkins are often Good Enough.
+            <p>
+              <a href="https://testloop.org/">Testloop</a> was
+              intended to GUI testrunner based around the idea of
+              continuous testing.  The idea is to use per-test
+              coverage data to predict which tests will likely fail
+              after a particular change to the source tree, and then
+              instantly run those tests instead of simply running the
+              entire test suite continuously.  I got this to a
+              proof-of-concept stage but then abandoned it, as
+              continuous integration tools like jenkins are often Good
+              Enough.
+            </p>
           </div>
 
           <div class="attributes">
             <span class="label">date</span> <span class="date">August 2011 &mdash; April 2012 (unfinished)</span><br />
-            <span class="label">url</span> <a href="https://testloop.org/">https://testloop.org/</a><br />
+            <span class="label">home</span> <a href="https://testloop.org/">https://testloop.org/</a><br />
             <span class="label">tech</span>
             <span class="tag">Python</span>
             <span class="tag">Qt</span>
           </div>
         </div>
       </section>
+
+      <footer>
+        <p class="copyright">
+          &copy; 2013 <a href="mailto:kuno@frob.nl">Kuno Woudt</a>
+        </p>
+        <p class="links">
+          <a href="https://frob.nl/">Home</a> |
+          <a href="https://frob.nl/cv/">Curriculum Vitae</a> |
+          <a href="https://twitter.com/byld/">Twitter</a>
+        </p>
+      </footer>
 
     </div>
 
