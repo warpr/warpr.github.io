@@ -16,20 +16,17 @@
 
       <ul class="musicbrainz">
         <li><img src="musicbrainz.kingdom.png" /></li>
-        <li><img src="musicbrainz.kingdom.credits-inline.png" /></li>
         <li><img src="musicbrainz.koda-kumi.edit.png" /></li>
+        <li><img src="musicbrainz.kingdom.credits-inline.png" /></li>
         <li><img src="musicbrainz.koda-kumi.json.png" /></li>
         <li><img src="musicbrainz.koda-kumi.xml.png" /></li>
         <li><img src="musicbrainz.coverartarchive.png" /></li>
       </ul>
 
-      <ul class="data-x-data">
-        <li><img src="DATAxDATA.png" /></li>
-      </ul>
-
-      <ul class="autoincrement">
-        <li><img src="autoincrement.org.png" /></li>
-        <li><img src="autoincrement.org.json.png" /></li>
+      <ul class="quaestio">
+        <li><img src="quaestio.login.png" /></li>
+        <li><img src="quaestio.main.png" /></li>
+        <li><img src="quaestio.addnew.png" /></li>
       </ul>
 
       <ul class="licensedb">
@@ -39,11 +36,25 @@
         <li><img src="licensedb.agplv3.rdf.png" /></li>
       </ul>
 
+      <ul class="databank-couchdb">
+        <li><img src="databank-couchdb.pump.png" /></li>
+        <li><img src="databank-couchdb.test.png" /></li>
+      </ul>
+
+      <ul class="data-x-data">
+        <li><img src="DATAxDATA.png" /></li>
+      </ul>
+
       <ul class="senet">
         <li><img src="senet.org.djmax-trilogy.edit.png" /></li>
         <li><img src="senet.org.rhythm-tengoku.edit.png" /></li>
         <li><img src="senet.org.rhythm-tengoku.json-ld.png" /></li>
         <li><img src="senet.org.rhythm-tengoku.png" /></li>
+      </ul>
+
+      <ul class="autoincrement">
+        <li><img src="autoincrement.org.png" /></li>
+        <li><img src="autoincrement.org.api.png" /></li>
       </ul>
 
       <ul class="testloop">
@@ -55,12 +66,27 @@
 
     <div class="content">
 
+      <h1>Portfolio</h1>
+
+      <p>
+        I am a web developer based in Rotterdam.
+      </p>
+      <p>
+        This page contains examples of my <a href="#work">professional work</a>
+        and <a href="#side">side projects</a> I have worked on in the past few years.
+      </p>
+      <p class="sign">
+        &#x301C; <a href="https://frob.nl/cv/">Kuno Woudt</a>
+      </p>
+
+      <a id="work"></a>
       <section class="musicbrainz">
+        <h2>MusicBrainz</h2>
         <div class="images">
           <ul class="bjqs">
             <li><img src="musicbrainz.kingdom.png" /></li>
-            <li><img src="musicbrainz.kingdom.credits-inline.png" /></li>
             <li><img src="musicbrainz.koda-kumi.edit.png" /></li>
+            <li><img src="musicbrainz.kingdom.credits-inline.png" /></li>
             <li><img src="musicbrainz.koda-kumi.json.png" /></li>
             <li><img src="musicbrainz.koda-kumi.xml.png" /></li>
             <li><img src="musicbrainz.coverartarchive.png" /></li>
@@ -68,14 +94,6 @@
         </div>
 
         <div class="details">
-          <h2>MusicBrainz</h2>
-          <span class="label">date</span> <span class="date">February 2010 &mdash; July 2013</span><br />
-          <span class="label">url</span> <a href="https://musicbrainz.org/">https://musicbrainz.org/</a><br />
-          <span class="label">tech</span>
-          <span class="tag">perl</span>
-          <span class="tag">javascript</span>
-          <span class="tag">postgresql</span><br />
-
           <div class="description">
             MusicBrainz is a community-maintained open source
             encyclopedia of music information.  As a contractor on
@@ -86,63 +104,62 @@
             the back-end database and a lucene based search server
             written in java.
           </div>
+
+          <div class="attributes">
+            <span class="label">date</span> <span class="date">February 2010 &mdash; July 2013</span><br />
+            <span class="label">url</span> <a href="https://musicbrainz.org/">https://musicbrainz.org/</a><br />
+            <span class="label">tech</span>
+            <span class="tag">perl</span>
+            <span class="tag">javascript</span>
+            <span class="tag">postgresql</span>
+          </div>
         </div>
       </section>
 
-      <section class="data-x-data">
+      <section class="quaestio">
+        <h2>Quaestio</h2>
         <div class="images">
           <ul class="bjqs">
-            <li><img src="DATAxDATA.png" /></li>
+            <li><img src="quaestio.login.png" /></li>
+            <li><img src="quaestio.main.png" /></li>
+            <li><img src="quaestio.addnew.png" /></li>
           </ul>
         </div>
 
         <div class="details">
-          <h2>DATA×DATA</h2>
-          <span class="label">date</span> <span class="date">January 2013</span><br />
-          <span class="label">url</span> <a href="https://frob.nl/DATAxDATA/">https://frob.nl/DATAxDATA/</a><br />
-          <span class="label">tech</span>
-          <span class="tag">nodejs</span>
-          <span class="tag">mysql</span><br />
-
           <div class="description">
-            Most web analytics systems are designed to track users, which
-            raises privacy concerns. DATA×DATA is designed to only log
-            screen resolution and browser version for each page view,
-            which is what I'm interested in as a web developer.
+            <p>
+              At <a href="http://cope.nl">COPE</a> I started as a
+              developer and system administrator on a survey tool
+              called Quaestio and a 360 degree feedback tool called
+              FeedbackTool.
+            </p>
+            <p>
+              During my final year at COPE I was was
+              the lead developer of Quaestio.  In this period I
+              introduced continuous deployment and automated testing
+              to the project, and started refactoring the codebase
+              to a more modular architecture.
+            </p>
+          </div>
+
+          <div class="attributes">
+            <span class="label">date</span> <span class="date">May 2006 &mdash; January 2010</span><br />
+            <span class="label">url</span> <a href="http://quaestio.com/">http://quaestio.com/</a><br />
+            <span class="label">tech</span>
+            <span class="tag">PHP</span>
+            <span class="tag">Javascript</span>
+            <span class="tag">MySQL</span>
+            <span class="tag">XML/XSLT</span>
           </div>
         </div>
       </section>
 
-      <section class="autoincrement">
-        <div class="images right">
-          <ul class="bjqs">
-            <li><img src="autoincrement.org.png" /></li>
-            <li><img src="autoincrement.org.json.png" /></li>
-          </ul>
-        </div>
+      <div class="spacer">&#x2766;</div>
 
-        <div class="details">
-          <h2>autoincrement.org</h2>
-          <span class="label">date</span> <span class="date">November 2012</span><br />
-          <span class="label">url</span> <a href="https://frob.nl/DATAxDATA/">http://autoincrement.org/</a><br />
-          <span class="label">tech</span>
-          <span class="tag">haskell</span>
-          <span class="tag">mysql</span><br />
-
-          <div class="description">
-            autoincrement.org is a silly domain originally intended as a
-            way to mint user-friendly identifiers for documents stored
-            in NoSQL databases which do not have an autoincrement type
-            or sequence common in SQL databases.  I now just
-            re-implement it whenever I want to learn a new web framework
-            or programming language.  Past implementations have been in
-            Python and <a href="http://opalang.org/">Opa</a>, the current version
-            is written in Haskell.
-          </div>
-        </div>
-      </section>
-
+      <a id="side"></a>
       <section class="licensedb">
+        <h2>LicenseDB</h2>
         <div class="images">
           <ul class="bjqs">
             <li><img src="licensedb.about.png" /></li>
@@ -153,15 +170,6 @@
         </div>
 
         <div class="details">
-          <h2>LicenseDB</h2>
-          <span class="label">date</span> <span class="date">February 2012 &mdash;</span><br />
-          <span class="label">url</span> <a href="https://licensedb.org/">https://licensedb.org/</a><br />
-          <span class="label">tech</span>
-          <span class="tag">RDF</span>
-          <span class="tag">node.js</span>
-          <span class="tag">Python</span>
-          <span class="tag">PHP</span><br />
-
           <div class="description">
             The License Database is intended to be a metadata database
             about open source / free software / free culture copyright
@@ -171,10 +179,87 @@
             everything together.  I would like to reimplement all of
             this in a more coherent manner.
           </div>
+
+          <div class="attributes">
+            <span class="label">date</span> <span class="date">February 2012 &mdash;</span><br />
+            <span class="label">url</span> <a href="https://licensedb.org/">https://licensedb.org/</a><br />
+            <span class="label">tech</span>
+            <span class="tag">RDF</span>
+            <span class="tag">node.js</span>
+            <span class="tag">Javascript</span>
+            <span class="tag">Python</span>
+            <span class="tag">PHP</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="databank-couchdb">
+        <h2>databank-couchdb</h2>
+        <div class="images">
+          <ul class="bjqs">
+            <li><img src="databank-couchdb.pump.png" /></li>
+            <li><img src="databank-couchdb.test.png" /></li>
+          </ul>
+        </div>
+
+        <div class="details">
+          <div class="description">
+            <p>
+              <a href="https://github.com/e14n/databank">databank</a>
+              is Evan Prodromou's NoSQL abstraction layer for node.js,
+              which is used by the pump.io social network server.
+            </p>
+            <p>
+              I have written a databank driver for CouchDB.  It is
+              feature complete but not ready for production use.  So
+              far the work on this has been entirely straightforward,
+              the interesting part will be dynamically generating
+              permanent views (CouchDB's equivalent to indexes).  It
+              currently uses temporary views, which are inherently
+              slow.
+            </p>
+          </div>
+
+          <div class="attributes">
+            <span class="label">date</span> <span class="date">January 2013, May 2013</span><br />
+            <span class="label">url</span> <a href="https://github.com/warpr/databank-couchdb/">https://github.com/warpr/databank-couchdb/</a><br />
+            <span class="label">tech</span>
+            <span class="tag">node.js</span>
+            <span class="tag">Javascript</span>
+            <span class="tag">CouchDB</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="data-x-data">
+        <h2>DATA×DATA</h2>
+        <div class="images">
+          <ul class="bjqs">
+            <li><img src="DATAxDATA.png" /></li>
+          </ul>
+        </div>
+
+        <div class="details">
+          <div class="description">
+            Most web analytics systems are designed to track users, which
+            raises privacy concerns. DATA×DATA is designed to only log
+            screen resolution and browser version for each page view,
+            which is what I'm interested in as a web developer.
+          </div>
+
+          <div class="attributes">
+            <span class="label">date</span> <span class="date">January 2013</span><br />
+            <span class="label">url</span> <a href="https://frob.nl/DATAxDATA/">https://frob.nl/DATAxDATA/</a><br />
+            <span class="label">tech</span>
+            <span class="tag">node.js</span>
+            <span class="tag">Javascript</span>
+            <span class="tag">MySQL</span>
+          </div>
         </div>
       </section>
 
       <section class="senet">
+        <h2>senet.org</h2>
         <div class="images">
           <ul class="bjqs">
             <li><img src="senet.org.djmax-trilogy.edit.png" /></li>
@@ -185,15 +270,6 @@
         </div>
 
         <div class="details">
-          <h2>senet.org</h2>
-          <span class="label">date</span> <span class="date">April 2012 &mdash; October 2012 (unfinished)</span><br />
-          <span class="label">url</span> <a href="https://gitorious.org/senet/">https://gitorious.org/senet/</a><br />
-          <span class="label">tech</span>
-          <span class="tag">RDF</span>
-          <span class="tag">Javascript</span>
-          <span class="tag">Python</span>
-          <span class="tag">CouchDB</span><br />
-
           <div class="description">
             senet.org is intended to be a metadata database about
             videogames.  This project was largely about experimenting
@@ -203,10 +279,52 @@
             importantly trying to express with RDF how a data entry form
             should be rendered and validated.
           </div>
+
+          <div class="attributes">
+            <span class="label">date</span> <span class="date">April 2012 &mdash; October 2012 (unfinished)</span><br />
+            <span class="label">url</span> <a href="https://gitorious.org/senet/">https://gitorious.org/senet/</a><br />
+            <span class="label">tech</span>
+            <span class="tag">RDF</span>
+            <span class="tag">Javascript</span>
+            <span class="tag">Python</span>
+            <span class="tag">CouchDB</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="autoincrement">
+        <h2>autoincrement.org</h2>
+        <div class="images right">
+          <ul class="bjqs">
+            <li><img src="autoincrement.org.png" /></li>
+            <li><img src="autoincrement.org.api.png" /></li>
+          </ul>
+        </div>
+
+        <div class="details">
+          <div class="description">
+            autoincrement.org is a silly domain originally intended as a
+            way to mint user-friendly identifiers for documents stored
+            in NoSQL databases which do not have an autoincrement type
+            or sequence common in SQL databases.  I now just
+            re-implement it whenever I want to learn a new web framework
+            or programming language.  Past implementations have been in
+            Python and <a href="http://opalang.org/">Opa</a>, the current version
+            is written in Haskell.
+          </div>
+
+          <div class="attributes">
+            <span class="label">date</span> <span class="date">November 2012</span><br />
+            <span class="label">url</span> <a href="https://frob.nl/DATAxDATA/">http://autoincrement.org/</a><br />
+            <span class="label">tech</span>
+            <span class="tag">Haskell</span>
+            <span class="tag">MySQL</span>
+          </div>
         </div>
       </section>
 
       <section class="testloop">
+        <h2>Testloop</h2>
         <div class="images">
           <ul class="bjqs">
             <li><img src="testloop.teaser.png" /></li>
@@ -215,13 +333,6 @@
         </div>
 
         <div class="details">
-          <h2>Testloop</h2>
-          <span class="label">date</span> <span class="date">August 2011 &mdash; April 2012 (unfinished)</span><br />
-          <span class="label">url</span> <a href="https://testloop.org/">https://testloop.org/</a><br />
-          <span class="label">tech</span>
-          <span class="tag">Python</span>
-          <span class="tag">Qt</span><br />
-
           <div class="description">
             testloop was intended to GUI testrunner based around the
             idea of continuous testing.  The idea is to use per-test
@@ -231,6 +342,14 @@
             suite continuously.  I got this to a proof-of-concept stage
             but then abandoned it, as continuous integration tools like
             jenkins are often Good Enough.
+          </div>
+
+          <div class="attributes">
+            <span class="label">date</span> <span class="date">August 2011 &mdash; April 2012 (unfinished)</span><br />
+            <span class="label">url</span> <a href="https://testloop.org/">https://testloop.org/</a><br />
+            <span class="label">tech</span>
+            <span class="tag">Python</span>
+            <span class="tag">Qt</span>
           </div>
         </div>
       </section>

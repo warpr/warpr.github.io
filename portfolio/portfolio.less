@@ -5,15 +5,22 @@
 @thumbheight: @fullheight / 2;
 @imgmargin: 16px;
 
-@background: #222;
 @margin: 50px;
 
+@background: #222;
 @headingcolor: #fff;
 @valuecolor: #fff;
+@textcolor: #888;
+
+@sidebar-bg: #fff;
+@sidebar-img-border: #aaa;
+
+@sans-serif: Verdana, Helvetica, sans-serif;
+@serif: 'Times New Roman', Times, serif;
 
 html, body, a, div, ul, li, h1, h2 {
     margin: 0; padding: 0; border: 0; outline: 0; font-size: 14px;
-    vertical-align: baseline; background: transparent; color: #888;
+    vertical-align: baseline; background: transparent; color: @textcolor;
     text-decoration: none; font-weight: normal;
 }
 
@@ -25,59 +32,94 @@ html, body, a, div, ul, li, h1, h2 {
 
 ul { list-style: none; }
 
-body { font-family: "DejaVu Sans", Verdana, Helvetica, sans-serif; }
+body { font-family: @sans-serif; }
 body { background: @background; }
 
-section { clear: both; }
+div.content > p {
+    color: @headingcolor;
+    font-family: @serif;
+    font-size: 16px;
+    margin: 1em auto;
+    text-align: center;
+    width: 24em;
+}
+
+div.content > p a { color: @headingcolor; font-family: inherit; font-size: inherit; }
+p.sign { padding-left: 11em; }
+
+section { clear: both; margin: 100px 0; }
+div.spacer { margin: 0 auto; text-align: center; font-size: 36px; }
+
+section:nth-child(odd) div.images { float: left; }
+section:nth-child(even) div.images { float: right; }
+
+section:nth-child(odd) div.details { margin-left: @margin + @margin + @thumbwidth; }
+section:nth-child(even) div.details { margin-left: @margin;  }
 
 div.sidebar, div.images { cursor: pointer; }
 
 div.images {
-    float: left;
     margin: 0px @margin;
     width: @thumbwidth;
     height: @thumbheight;
 }
 
 div.details {
-    margin: @margin @margin @margin (@margin + @margin + @thumbwidth);
+    margin: 0px @margin @margin @margin;
     width: @thumbwidth;
     min-height: @thumbheight;
+    position: relative;
+}
+
+div.attributes {
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 div.content {
-    width: @margin + @margin + @fullwidth;
+    width: @margin + @margin + @margin + @fullwidth;
     position: absolute;
     left: 0;
     top: 0;
 }
+
 div.sidebar {
     position: absolute;
     left: (0 - (@fullwidth + @imgmargin + @imgmargin));
     top: 0;
     margin: 0;
     width: (@fullwidth + @imgmargin + @imgmargin);
-    background: #fff;
+    background: @sidebar-bg;
     overflow: hidden;
     z-index: 20;
     box-shadow: 5px 5px 50px rgba(0,0,0,0.5);
 }
 div.sidebar li img {
     margin: (@imgmargin - 1);
-    border: 1px solid #aaa;
+    border: 1px solid @sidebar-img-border;
 }
 
-
+h1 {
+    color: @headingcolor;
+    font-weight: 100;
+    font-size: 44px;
+    margin: 50px;
+    font-family: @serif;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
 
 h2 {
-    text-transform: uppercase;
+    text-align: center;
+    font-family: @serif;
     color: @headingcolor;
-    font-size: 18px;
-    border-bottom: 1px solid @headingcolor;
+    font-size: 36px;
+    font-style: italic;
     margin-bottom: 1em;
 }
 
-div.description { margin-top: 1em; text-align: justify; }
+div.description { margin: 1em 0; text-align: justify; }
 
 span.label, span.date, span.tech, a { line-height: 22px; }
 
@@ -91,3 +133,4 @@ span.tag {
     font-size: 12px;
     padding: 2px 5px;
 }
+
