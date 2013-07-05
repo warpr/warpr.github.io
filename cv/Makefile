@@ -5,7 +5,7 @@ cv.json: cv.html
 	python ./docraptor.py
 
 cv.private.pdf: cv.html
-	~/opt/prince/bin/prince $< $@
+	/usr/bin/prince $< $@
 
 index.html: cv.html
 	ln -s $< $@
