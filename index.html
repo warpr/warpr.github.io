@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>frob.nl</title>
+        <meta charset="utf-8" />
         <link rel="openid2.provider" href="https://openid.stackexchange.com/openid/provider">
         <link rel="openid2.local_id" href="https://openid.stackexchange.com/user/7e5cee62-ee5e-4e96-8b29-44db5be4c5be">
         <style type="text/css">
@@ -16,6 +17,8 @@
               -moz-box-sizing: border-box;
               -webkit-box-sizing: border-box;
           }
+
+          .hide { display: none ! important; }
 
           body {
               background-color: #ddf;
@@ -124,14 +127,14 @@
       <div class="links" resource="#me">
 
         <ul>
-<!--
-          <li><a property="foaf:currentProject" href="https://testloop.org">testloop.org</a></li>
--->
           <li><a href="https://frob.nl/cv/">Curriculum Vitae</a></li>
-          <li><a href="https://frob.nl/portfolio/">Portfolio</a></li>
-          <li><a property="sioct:Microblog" href="http://twitter.com/byld">twitter</a></li>
-          <li><a property="foaf:homepage" href="https://320x200.org">320x200</a></li>
-          <li><a property="foaf:homepage" href="https://warpr.org">warpr</a></li>
+          <li><a property="sioct:Microblog" href="https://identi.ca/warp/">identi.ca</a></li>
+          <li><a property="sioct:Microblog" href="https://twitter.com/byld/">twitter</a></li>
+          <li><a href="https://github.com/warpr/">github</a></li>
+          <li class="hide"><a href="https://frob.nl/portfolio/">Portfolio</a></li>
+          <li class="hide"><a href="https://320x200.org">320x200</a></li>
+          <li class="hide"><a href="https://warpr.org">warpr</a></li>
+          <li class="hide"><a property="foaf:currentProject" href="http://waldmeta.org">wald:meta</a></li>
         </ul>
 
       </div>

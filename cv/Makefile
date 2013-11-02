@@ -1,7 +1,7 @@
 
 all: cv.json cv.private.pdf index.html
 
-cv.json: cv.html
+cv.json: cv.html docraptor.py
 	python ./docraptor.py
 
 cv.private.pdf: cv.html
