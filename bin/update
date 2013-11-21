@@ -1,0 +1,10 @@
+#!/bin/bash
+
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ] ; do SOURCE="$(readlink "$SOURCE")"; done
+DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+
+$DIR/step1 > /dev/null
+$DIR/step2 > /dev/null
+$DIR/step3 > /dev/null
+

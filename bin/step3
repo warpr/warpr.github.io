@@ -8,6 +8,8 @@ cd "$DIR/../"
 
 export FROB="static"
 
+echo "Building site"
+
 mkdir -p projects/portfolio
 rm -f projects/portfolio/*png
 ln src/portfolio/*png projects/portfolio/
