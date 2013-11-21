@@ -18,3 +18,5 @@ php src/activity.php > index.html
 php src/projects.php > projects/index.html
 cp src/me.png me.png
 cp src/site.js site.js
+cp cv/cv.html cv/index.html
+
