@@ -65,7 +65,7 @@ function lightbox($name, $title) {
 
 <div class="col-sm-8 col-md-8 col-lg-9 full-height" id="content">
 
-  <header>
+  <header id="projects-header">
     <h1>Projects</h1>
     <p>I am a web developer based in Rotterdam.</p>
     <p>
