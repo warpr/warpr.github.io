@@ -1,0 +1,13 @@
+{
+  "author": "Kuno Woudt <kuno@frob.nl>",
+  "dependencies": {
+    "bower": "~1.2.7"
+  },
+  "description": "frob.nl",
+  "engines": {
+    "node": ">=0.10"
+  },
+  "license": "CC BY-NC-ND 3.0",
+  "name": "frob.nl",
+  "version": "0.3.0"
+}

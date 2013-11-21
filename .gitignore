@@ -5,6 +5,9 @@ tmp
 cv/index.html
 cv/cv.private.pdf
 cv/cv.json
-portfolio/node_modules/
-portfolio/portfolio.css
+/node_modules/
+/bower_components/
 .tern-port
+/activity/*.html
+/activity/*.xml
+/activity/*.json

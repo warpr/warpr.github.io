@@ -1,9 +1,0 @@
-{
-    "author": "Kuno Woudt <kuno@frob.nl>",
-    "dependencies": {
-        "less": "1.x.x"
-    },
-    "description": "portfolio",
-    "name": "portfolio",
-    "version": "0.1.0"
-}
