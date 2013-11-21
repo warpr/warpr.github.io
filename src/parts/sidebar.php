@@ -14,9 +14,9 @@
   </div>
 
   <div id="menu-wrapper">
-    <div class="menu-item h4 <?= $activity_selected ?>"><i class="fa fa-star"></i>Activity</div>
-    <div class="menu-item h4 <?= $projects_selected ?>"><i class="fa fa-code"></i>Projects</div>
-    <div class="menu-item h4"><i class="fa fa-inbox"></i>R&eacute;sum&eacute;</div>
+    <div class="menu-item h4 <?= $activity_selected ?>"><i class="fa fa-star"></i><a href="/">Activity</a></div>
+    <div class="menu-item h4 <?= $projects_selected ?>"><i class="fa fa-code"></i><a href="/projects/">Projects</a></div>
+    <div class="menu-item h4"><i class="fa fa-inbox"></i><a href="/cv/">R&eacute;sum&eacute;</a></div>
   </div>
 </div>
 

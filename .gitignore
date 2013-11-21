@@ -8,6 +8,8 @@ cv/cv.json
 /node_modules/
 /bower_components/
 .tern-port
-/activity/*.html
-/activity/*.xml
-/activity/*.json
+/activity/
+/projects/
+/site.js
+/style.css
+/me.png

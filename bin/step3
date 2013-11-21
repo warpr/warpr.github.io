@@ -1,0 +1,18 @@
+#!/bin/bash
+
+SOURCE="${BASH_SOURCE[0]}"
+while [ -h "$SOURCE" ] ; do SOURCE="$(readlink "$SOURCE")"; done
+DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
+
+cd "$DIR/../"
+
+export FROB="static"
+
+mkdir -p projects/portfolio
+rm -f projects/portfolio/*png
+ln src/portfolio/*png projects/portfolio/
+node_modules/.bin/lessc src/style.less > style.css
+php src/activity.php > index.html
+php src/projects.php > projects/index.html
+cp src/me.png me.png
+cp src/site.js site.js

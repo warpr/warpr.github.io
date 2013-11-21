@@ -1,4 +1,5 @@
 #!/usr/bin/env python2
+# -*- mode: python -*-
 
 from __future__ import absolute_import
 from __future__ import print_function
@@ -7,6 +8,7 @@ from __future__ import unicode_literals
 # requirements:
 # sudo apt-get install python-html5lib python-lxml python-iso8601 python-tz
 
+import os
 import codecs
 import datetime
 import iso8601
@@ -17,10 +19,12 @@ import pytz
 import re
 import requests
 from collections import namedtuple
+from os.path import abspath, dirname, isdir, isfile, join
 
 Activity = namedtuple(
     "Activity", "avatar title summary url datetime type level service")
 
+_root = dirname (dirname (abspath (__file__)))
 
 def parse_html (filename):
     with codecs.open (filename, "rb", "UTF-8") as f:
@@ -307,6 +311,8 @@ def write_results (filename, events):
 
 if __name__ == '__main__':
     print ("Parsing events...")
+
+    os.chdir (join (_root, 'activity'))
 
     events = sorted (itertools.chain (
         bitbucket ("bitbucket.events.html"),
