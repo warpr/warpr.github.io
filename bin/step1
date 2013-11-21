@@ -5,6 +5,7 @@ while [ -h "$SOURCE" ] ; do SOURCE="$(readlink "$SOURCE")"; done
 DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 CURL="curl --silent"
+JSONINDENT="/home/warp/dotrc/bin/jsonindent"
 
 mkdir -p "$DIR/../activity"
 cd "$DIR/../activity"
@@ -20,7 +21,7 @@ $CURL 'https://warpr.org/atom/' > warpr.org.atom.xml
 echo "frob.nl blog events"
 $CURL 'https://frob.nl/blog/atom/' > blog.atom.xml
 echo "identi.ca events"
-$CURL 'https://identi.ca/warp/' | grep initialData | sed 's/.*initialData = //' | sed 's/;$//' | jsonindent > identi.ca.json
+$CURL 'https://identi.ca/warp/' | grep initialData | sed 's/.*initialData = //' | sed 's/;$//' | $JSONINDENT > identi.ca.json
 echo "stackoverflow events"
 $CURL 'http://stackoverflow.com/feeds/user/7700' > stackoverflow.atom.xml
 echo "done"
