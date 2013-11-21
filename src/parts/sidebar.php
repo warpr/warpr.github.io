@@ -1,7 +1,7 @@
 
 <div class="col-sm-4 col-md-4 col-lg-3 full-height" id="menu">
   <div id="photo-border" class="img-circle" >
-    <img id="photo" src="me.png" class="img-circle" />
+    <img id="photo" src="/me.png" class="img-circle" />
   </div>
   <h1 class="h3">Kuno Woudt</h1>
   <i class="fa fa-clock-o"></i> UTC+1

@@ -6,6 +6,6 @@
   <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
   <script src="../bower_components/less/dist/less-1.5.1.js"></script>
 <?php endif; ?>
-<script src="site.js"></script>
+<script src="/site.js"></script>
 
 
