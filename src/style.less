@@ -171,3 +171,9 @@ img.avatar { background: @event-bg; }
 #timezone:hover { color: @sidebar-highlight; }
 
 #menu-wrapper a.secret { opacity: 0.0; }
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    #menu-wrapper a.secret {
+        border-top: 1px solid @sidebar-color;
+        margin-top: 51px;
+    }
+}
