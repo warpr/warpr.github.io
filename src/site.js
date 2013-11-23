@@ -94,6 +94,15 @@ var projects = function () {
 
     $('#timezone').click (function () { $('#expanded-timezone').toggle (); });
 
+    /* Show top-secret archive link on hover. */
+    $('.secret').hover (function (event) {
+        /* FIXME: should probably using a custom easing function here. */
+        $(this).stop (true).fadeTo (2000, 0.2, "linear").fadeTo (1000, 1.0);
+    },
+    function (event) {
+        $(this).stop (true).fadeTo (1000, 0.0);
+    });
+
 })();
 
 
