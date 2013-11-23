@@ -28,34 +28,38 @@ div.header { display: none; }
 .clearfix:after { clear: both; }
 
 div.header {
-    width: 100%;
-    background: #fff;
-    color: #444;
-    border-bottom: 1px solid #444;
-    margin-bottom: 32px;
+  width: 100%;
+  border-bottom: 1px solid #444;
+  margin-bottom: 48px;
 }
+div.header table {
+  font-size: 10pt; width: 50em;
+  border; 0; margin: 0 0 0 5em; padding: 0;
+  border-collapse: collapse; border-spacing: 0;
+}
+div.header tr, div.header td { border; 0; margin: 0; padding: 0; }
+div.header td {
+  width: 33%;
+  border-color: #444;
+  border-style: solid;
+  border-width: 0 1px;
+}
+
 .menu-item {
   display: block;
-  width: 180px;
-  padding: 10px;
+  width: 100%;
+  padding: 10px 0;
+  margin: 0;
   font-size: 14px;
-  float: right;
   text-align: center;
   text-transform: uppercase;
-  border-left: 1px solid #444;
 }
-.menu-item.selected { background: #bbb; }
-.menu-item.download {
-    float: left;
-    border-left: 0;
-    border-right: 1px solid #444;
-    width: 200px;
-}
+.menu-item.selected { background: #ccc; float: right; }
 .menu-item i {
   padding-right: 16px;
   display: inline-block;
 }
-.menu-item:hover { background: #f66; }
+.menu-item:hover { background: #ddd; }
 
 body {
     font-family: arial, sans-serif;
@@ -70,7 +74,7 @@ p.clear, h1, h2, h3, h4 { clear: both; }
 .outdated { display: none; }
 .job { page-break-inside: avoid; }
 
-.cvkuno, .cvtitle {
+.download, .cvkuno, .cvtitle {
     text-transform: uppercase;
     font-weight: bolder;
     margin: 0;
@@ -78,6 +82,7 @@ p.clear, h1, h2, h3, h4 { clear: both; }
     font-size: 16pt;
 }
 .cvtitle { color: #444; font-size: 12pt; }
+.download { color: #444; font-size: 12pt; }
 span.cvsep { color: #000; }
 
 table.left { float: left; }
@@ -108,14 +113,26 @@ span.cvjust { text-align: justify; }
     </style>
   </head>
   <body>
-    <div class="header clearfix">
-      <a class="menu-item download" href="/cv/cv.pdf"><div class="h4"><i class="fa fa-download"></i>Download as PDF</div></a>
-      <a class="menu-item selected" href="/cv/"><div class="h4"><i class="fa fa-inbox"></i>R&eacute;sum&eacute;</div></a>
-      <a class="menu-item" href="/projects/"><div class="h4"><i class="fa fa-code"></i>Projects</div></a>
+    <div class="header">
+      <table>
+        <tr>
+          <td>
       <a class="menu-item" href="/"><div class="h4"><i class="fa fa-star"></i>Activity</div></a>
+          </td>
+          <td>
+      <a class="menu-item" href="/projects/"><div class="h4"><i class="fa fa-code"></i>Projects</div></a>
+          </td>
+          <td>
+      <a class="menu-item selected" href="/cv/"><div class="h4"><i class="fa fa-inbox"></i>R&eacute;sum&eacute;</div></a>
+          </td>
+        </tr>
+      </table>
     </div>
 
     <div class="section">
+      <div class="download">
+        <a href="cv.pdf">Download as PDF</a>
+      </div>
       <div class="cvkuno">Kuno Woudt</div>
       <div class="cvtitle">Curriculum Vitae</div>
 
