@@ -10,7 +10,7 @@ var projects = function () {
 
     /* cross-fade screenshots. */
     var fadeshow_options = { duration: 1000 };
-    var fadeshow_pause = 20000;
+    var fadeshow_pause = 6000;
     var fadeshow_stagger = fadeshow_pause / 3;
 
     $('.images ul li:first-child').addClass ('visible');
