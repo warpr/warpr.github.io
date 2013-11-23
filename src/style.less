@@ -69,6 +69,10 @@ li { list-style: none outside none; }
 #menu-wrapper { margin-top: 96px; }
 .menu-item i { width: 32px; display: inline-block; }
 
+#expanded-timezone { margin: 60px auto; display: none; }
+#expanded-timezone p { width: 200px; text-align: right; }
+#expanded-timezone p span { padding-left: 7px; }
+
 .container { margin-left: 0; margin-right: auto; }
 
 header { margin: 2em auto; text-align: center; max-width: 36em; }
@@ -146,6 +150,8 @@ img.avatar { background: @event-bg; }
 #content .activity-event .date { color: @event-subtle; }
 #content hr.activity { border-color: @event-subtle; }
 
-/* lightbox */
+/* interaction */
 .lightbox .modal-body img { display: none; }
 .lightbox .modal-body img:first-child { display: inline; }
+
+#timezone { cursor: pointer; }

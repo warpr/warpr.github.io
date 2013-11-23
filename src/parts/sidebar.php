@@ -4,7 +4,14 @@
     <img id="photo" src="/me.png" class="img-circle" />
   </div>
   <h1 class="h3">Kuno Woudt</h1>
-  <i class="fa fa-clock-o"></i> UTC+1
+  <span id="timezone"><i class="fa fa-clock-o"></i> UTC+1</span>
+
+  <div id="expanded-timezone">
+    <p>
+      my time <span id="kuno-time"> ... </span><br/>
+      your time <span id="your-time"> ... </span>
+    </p>
+  </div>
 
   <div id="contact">
     <p><i class="fa fa-comments"></i> warp on <a href="https://www.freenode.net/">freenode irc</a></p>
