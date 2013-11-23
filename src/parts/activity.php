@@ -57,16 +57,13 @@ function render_verb ($event) {
 }
 
 function render_title ($event) {
-    /* if (preg_match ("/<a.*href/", $event["title"])) */
-    /* { */
-    /*     $title = $event["title"]; */
-    /* } */
-    /* else */
-    /* { */
-    /*     $title = '<a href='.$event["url"].'>'.$event["title"].'</a>'; */
-    /* } */
-
     $title = $event["title"];
+
+    if ($event["service"] == "devblog")
+    {
+        $title = '<a href='.$event["url"].'>'.$event["title"].'</a>';
+    }
+
     echo "<h5 class=\"title\">$title </h5>";
 }
 

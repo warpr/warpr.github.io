@@ -17,6 +17,5 @@ node_modules/.bin/lessc src/style.less > style.css
 php src/activity.php > index.html
 php src/projects.php > projects/index.html
 cp src/me.png me.png
-cp src/site.js site.js
 cp cv/cv.html cv/index.html
-
+cat src/timezone.js src/site.js > site.js

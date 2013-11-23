@@ -2,6 +2,8 @@
   <head>
     <title>Kuno Woudt, Curriculum Vitae</title>
     <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="5" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.css">
     <style type="text/css">
 
 @page {
@@ -12,13 +14,52 @@
 }
 
 div.download { display: none; }
+div.header { display: none; }
 
 @media screen {
-
+    div.header { display: block; }
     div.download { display: block; float: left; text-align: left; }
     div.personal { margin-top: 5em; }
     .section { margin-left: 5em; width: 50em; text-align: left; }
 }
+
+.clearfix:before,
+.clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+
+div.header {
+  width: 100%;
+  border-bottom: 1px solid #444;
+  margin-bottom: 48px;
+}
+div.header table {
+  font-size: 10pt; width: 50em;
+  border; 0; margin: 0 0 0 5em; padding: 0;
+  border-collapse: collapse; border-spacing: 0;
+}
+div.header tr, div.header td { border; 0; margin: 0; padding: 0; }
+div.header td {
+  width: 33%;
+  border-color: #444;
+  border-style: solid;
+  border-width: 0 1px;
+}
+
+.menu-item {
+  display: block;
+  width: 100%;
+  padding: 10px 0;
+  margin: 0;
+  font-size: 14px;
+  text-align: center;
+  text-transform: uppercase;
+}
+.menu-item.selected { background: #ccc; float: right; }
+.menu-item i {
+  padding-right: 16px;
+  display: inline-block;
+}
+.menu-item:hover { background: #ddd; }
 
 body {
     font-family: arial, sans-serif;
@@ -72,6 +113,22 @@ span.cvjust { text-align: justify; }
     </style>
   </head>
   <body>
+    <div class="header">
+      <table>
+        <tr>
+          <td>
+      <a class="menu-item" href="/"><div class="h4"><i class="fa fa-star"></i>Activity</div></a>
+          </td>
+          <td>
+      <a class="menu-item" href="/projects/"><div class="h4"><i class="fa fa-code"></i>Projects</div></a>
+          </td>
+          <td>
+      <a class="menu-item selected" href="/cv/"><div class="h4"><i class="fa fa-inbox"></i>R&eacute;sum&eacute;</div></a>
+          </td>
+        </tr>
+      </table>
+    </div>
+
     <div class="section">
       <div class="download">
         <a href="cv.pdf">Download as PDF</a>
@@ -137,7 +194,7 @@ span.cvjust { text-align: justify; }
       <h2>work experience</h2>
 
       <div class="job">
-        <div class="cvdate">September 2013 - present / <span class="cvfirm">
+        <div class="cvdate">August 2013 - present / <span class="cvfirm">
             <a href="https://zestsoftware.nl">Zest Software</a></span>
         </div>
         <p class="cvjust">

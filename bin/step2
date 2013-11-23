@@ -131,17 +131,25 @@ def bitbucket (filename):
             service="bitbucket")
 
 
-def github_issue_comment_event (event):
-    summary = ('<a href="%s">%s</a> commented on ' +
-            '<a href="%s">%s</a> <a href="%s">issue #%s</a>.') % (
-                event["actor"]["url"],
-                event["actor"]["login"],
-                event["repo"]["url"],
-                event["repo"]["name"],
-                event["payload"]["issue"]["url"],
-                event["payload"]["issue"]["number"])
+def github_actor (event):
+    return '<a href="%s">%s</a>' % (
+        'https://github.com/' + event["actor"]["login"],
+        event["actor"]["login"])
 
-    return (event["payload"]["issue"]["url"], summary)
+def github_fix_repo_url (url):
+    return url.replace ('https://api.github.com/repos/',
+                        'https://github.com/')
+
+def github_issue_comment_event (event):
+    summary = ('%s commented on <a href="%s">%s</a> ' +
+               '<a href="%s">issue #%s</a>.') % (
+                   github_actor (event),
+                   github_fix_repo_url (event["repo"]["url"]),
+                   event["repo"]["name"],
+                   event["payload"]["issue"]["html_url"],
+                   event["payload"]["issue"]["number"])
+
+    return (event["payload"]["issue"]["html_url"], summary)
 
 
 def github_push_event (event):
@@ -149,42 +157,41 @@ def github_push_event (event):
     if event["payload"]["size"] > 1:
         topic = unicode(event["payload"]["size"]) + " commits"
 
-    summary = ('<a href="%s">%s</a> pushed ' +
-            '<a href="%s">%s</a> to <a href="%s">%s</a>.') % (
-                event["actor"]["url"],
-                event["actor"]["login"],
-                event["payload"]["commits"][0]["url"],
-                topic,
-                event["repo"]["url"],
-                event["repo"]["name"])
+    commit_url = github_fix_repo_url (event["payload"]["commits"][0]["url"])
 
-    return (event["payload"]["commits"][0]["url"], summary)
+    summary = ('%s pushed <a href="%s">%s</a> to <a href="%s">%s</a>.') % (
+        github_actor (event),
+        commit_url,
+        topic,
+        github_fix_repo_url (event["repo"]["url"]),
+        event["repo"]["name"])
+
+    return (commit_url, summary)
 
 
 def github_pull_request_event (event):
-    summary = ('<a href="%s">%s</a> submitted ' +
+    pull_request_url = github_fix_repo_url (
+        event["payload"]["pull_request"]["url"])
+    summary = ('%s submitted ' +
                '<a href="%s">pull request #%s</a> to <a href="%s">%s</a>.') % (
-                event["actor"]["url"],
-                event["actor"]["login"],
-                event["payload"]["pull_request"]["url"],
-                event["payload"]["pull_request"]["number"],
-                event["repo"]["url"],
-                event["repo"]["name"])
+                   github_actor (event),
+                   pull_request_url,
+                   event["payload"]["pull_request"]["number"],
+                   github_fix_repo_url (event["repo"]["url"]),
+                   event["repo"]["name"])
 
-    return (event["payload"]["pull_request"]["url"], summary)
+    return (pull_request_url, summary)
 
 
 def github_create_event (event):
-    summary = ('<a href="%s">%s</a> created ' +
-            '%s %s in <a href="%s">%s</a>.') % (
-                event["actor"]["url"],
-                event["actor"]["login"],
-                event["payload"]["ref_type"],
-                event["payload"]["ref"],
-                event["repo"]["url"],
-                event["repo"]["name"])
+    summary = ('%s created %s %s in <a href="%s">%s</a>.') % (
+        github_actor (event),
+        event["payload"]["ref_type"],
+        event["payload"]["ref"],
+        github_fix_repo_url (event["repo"]["url"]),
+        event["repo"]["name"])
 
-    return (event["repo"]["url"], summary)
+    return (github_fix_repo_url (event["repo"]["url"]), summary)
 
 
 def github (filename):

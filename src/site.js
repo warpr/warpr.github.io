@@ -10,7 +10,7 @@ var projects = function () {
 
     /* cross-fade screenshots. */
     var fadeshow_options = { duration: 1000 };
-    var fadeshow_pause = 20000;
+    var fadeshow_pause = 6000;
     var fadeshow_stagger = fadeshow_pause / 3;
 
     $('.images ul li:first-child').addClass ('visible');
@@ -63,6 +63,46 @@ var projects = function () {
         }
     }
     full_height();
+    /* This doesn't seem to trigger in some browser responsive emulation
+       modes :( */
     $(window).resize(function () { full_height(); });
 
+    /* Slightly over-engineered time display... */
+    var _g = { now: moment.utc () };
+    // var kuno_tz = 'America/Guayaquil';
+    var kuno_tz = 'Europe/Amsterdam';
+    var your_zone = moment().zone ();
+
+    var update_time = function () {
+        $('#kuno-time').text (_g.now.clone().tz(kuno_tz).format ('HH:mm'));
+        $('#your-time').text (_g.now.clone().zone(your_zone).format ('HH:mm'));
+
+        _g.now.add ('seconds', 1);
+    }
+
+    var update_from_server = function () {
+        var promise = $.ajax (window.location.href, { type: 'HEAD' });
+        promise.done (function (data, status, $xhr) {
+            _g.now = moment.utc($xhr.getResponseHeader ('Date'));
+        });
+    }
+
+    update_from_server ();
+    setInterval (update_time, 1000);
+    /* Don't trust client time, replace it with server time regularly. */
+    setInterval (update_from_server, 9 * 60000);
+
+    $('#timezone').click (function () { $('#expanded-timezone').toggle (); });
+
+    /* Show top-secret archive link on hover. */
+    $('.secret').hover (function (event) {
+        /* FIXME: should probably using a custom easing function here. */
+        $(this).stop (true).fadeTo (2000, 0.2, "linear").fadeTo (1000, 1.0);
+    },
+    function (event) {
+        $(this).stop (true).fadeTo (1000, 0.0);
+    });
+
 })();
+
+
