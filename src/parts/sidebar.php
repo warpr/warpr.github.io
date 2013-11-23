@@ -21,9 +21,9 @@
   </div>
 
   <div id="menu-wrapper">
-    <div class="menu-item h4 <?= $activity_selected ?>"><i class="fa fa-star"></i><a href="/">Activity</a></div>
-    <div class="menu-item h4 <?= $projects_selected ?>"><i class="fa fa-code"></i><a href="/projects/">Projects</a></div>
-    <div class="menu-item h4"><i class="fa fa-inbox"></i><a href="/cv/">R&eacute;sum&eacute;</a></div>
+     <a class="menu-item <?= $activity_selected ?>" href="/"><div class="h4"><i class="fa fa-star"></i>Activity</div></a>
+     <a class="menu-item <?= $projects_selected ?>" href="/projects/"><div class="h4"><i class="fa fa-code"></i>Projects</div></a>
+     <a class="menu-item" href="/cv/"><div class="h4"><i class="fa fa-inbox"></i>R&eacute;sum&eacute;</div></a>
   </div>
 </div>
 
