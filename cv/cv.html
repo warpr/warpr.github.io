@@ -13,10 +13,10 @@
 }
 
 div.download { display: none; }
-div.header { display: none; }
+div.home { display: none; }
 
 @media screen {
-    div.header { display: block; }
+    div.home { display: block; }
     div.download { display: block; float: left; text-align: left; }
     div.personal { margin-top: 5em; }
     .section { margin-left: 5em; width: 50em; text-align: left; }
@@ -26,23 +26,10 @@ div.header { display: none; }
 .clearfix:after { content: " "; display: table; }
 .clearfix:after { clear: both; }
 
-div.header {
-  width: 100%;
-  border-bottom: 1px solid #444;
-  margin-bottom: 48px;
-}
-div.header table {
-  font-size: 10pt; width: 50em;
-  border; 0; margin: 0 0 0 5em; padding: 0;
-  border-collapse: collapse; border-spacing: 0;
-}
-div.header tr, div.header td { border; 0; margin: 0; padding: 0; }
-div.header td {
-  width: 33%;
-  border-color: #444;
-  border-style: solid;
-  border-width: 0 1px;
-}
+div.home { float: left; padding: 1em; }
+div.home a { font-size: 200%; color: #444; }
+div.home a:hover { color: #000; }
+
 
 .menu-item {
   display: block;
@@ -112,20 +99,8 @@ span.cvjust { text-align: justify; }
     </style>
   </head>
   <body>
-    <div class="header">
-      <table>
-        <tr>
-          <td>
-      <a class="menu-item" href="/"><div class="h4"><i class="fa fa-star"></i>Activity</div></a>
-          </td>
-          <td>
-      <a class="menu-item" href="/projects/"><div class="h4"><i class="fa fa-code"></i>Projects</div></a>
-          </td>
-          <td>
-      <a class="menu-item selected" href="/cv/"><div class="h4"><i class="fa fa-inbox"></i>R&eacute;sum&eacute;</div></a>
-          </td>
-        </tr>
-      </table>
+    <div class="home">
+      <a href="/"><i class="fa fa-home"> </i></a>
     </div>
 
     <div class="section">
