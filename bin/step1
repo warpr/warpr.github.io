@@ -5,7 +5,7 @@ while [ -h "$SOURCE" ] ; do SOURCE="$(readlink "$SOURCE")"; done
 DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
 CURL="curl --silent"
-JSONINDENT="/home/warp/dotrc/bin/jsonindent"
+JSONINDENT="$DIR/jsonindent"
 
 mkdir -p "$DIR/../activity"
 cd "$DIR/../activity"
@@ -26,6 +26,6 @@ echo "stackoverflow events"
 $CURL 'http://stackoverflow.com/feeds/user/7700' > stackoverflow.atom.xml
 echo "steam recent games"
 # FIXME: this doesn't include the avatar.
-$CURL 'http://steamcommunity.com/id/paksangsoo/games/' | grep rgGames | sed 's/.*rgGames = //' | sed 's/\;\r//' | jsonindent > steamgames.json
+$CURL 'http://steamcommunity.com/id/paksangsoo/games/' | grep rgGames | sed 's/.*rgGames = //' | sed 's/\;\r//' | $JSONINDENT > steamgames.json
 echo "done"
 
