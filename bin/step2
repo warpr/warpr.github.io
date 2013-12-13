@@ -1,5 +1,5 @@
 #!/usr/bin/env python2
-# -*- mode: python -*-
+# -*- mode: python, encoding: utf-8 -*-
 
 from __future__ import absolute_import
 from __future__ import print_function
@@ -226,6 +226,26 @@ def github (filename):
             service="github")
 
 
+def steam (filename):
+    data = parse_json (filename)
+
+    user = '<a href="http://steamcommunity.com/id/paksangsoo/">박상수</a>'
+
+    for event in data:
+        dt = datetime.datetime.utcfromtimestamp(event["last_played"])
+        game = '<a href="http://steamcommunity.com/app/%s">%s</a>' % (
+            event["appid"], event["name"])
+
+        yield Activity(
+            avatar=None,
+            title=None,
+            summary=user + ' played ' + game,
+            url="http://steamcommunity.com/id/paksangsoo/games/",
+            type="played",
+            level="minor",
+            datetime=dt.replace (tzinfo=pytz.utc),
+            service="steam")
+
 def pump (filename):
     data = parse_json (filename)
 
@@ -327,7 +347,8 @@ if __name__ == '__main__':
         pump ("identi.ca.json"),
         devblog ("blog.atom.xml"),
         stackoverflow ("stackoverflow.atom.xml"),
-        twitter ("twitter.events.html")
+        twitter ("twitter.events.html"),
+        steam ("steamgames.json")
     ), cmp=cmp_datetime, reverse=True)
 
     write_results ("events.json", events)

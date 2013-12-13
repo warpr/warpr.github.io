@@ -24,5 +24,8 @@ echo "identi.ca events"
 $CURL 'https://identi.ca/warp/' | grep initialData | sed 's/.*initialData = //' | sed 's/;$//' | $JSONINDENT > identi.ca.json
 echo "stackoverflow events"
 $CURL 'http://stackoverflow.com/feeds/user/7700' > stackoverflow.atom.xml
+echo "steam recent games"
+# FIXME: this doesn't include the avatar.
+$CURL 'http://steamcommunity.com/id/paksangsoo/games/' | grep rgGames | sed 's/.*rgGames = //' | sed 's/\;\r//' | jsonindent > steamgames.json
 echo "done"
 

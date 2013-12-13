@@ -1,5 +1,7 @@
 <?php
 
+date_default_timezone_set('UTC');
+
 $major_fn = dirname (__FILE__)."/../../activity/major.json";
 $minor_fn = dirname (__FILE__)."/../../activity/minor.json";
 
@@ -38,6 +40,7 @@ function render_verb ($event) {
         "bitbucket" => "fa-bitbucket",
         "twitter" => "fa-twitter",
         "stackoverflow" => "fa-stack-overflow",
+        "steam" => "fa-gamepad",
         );
 
     if (array_key_exists ($event["service"], $icons)) {
