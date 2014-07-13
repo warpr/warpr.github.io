@@ -1,0 +1,66 @@
+==================================================================
+https://keybase.io/kuno
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://frob.nl
+  * I am kuno (https://keybase.io/kuno) on keybase.
+  * I have a public key with fingerprint CD8B DEB7 DB1D F510 E63F  E870 E5DF CA41 E61D 71C9
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "cd8bdeb7db1df510e63fe870e5dfca41e61d71c9",
+            "host": "keybase.io",
+            "key_id": "e5dfca41e61d71c9",
+            "uid": "fbf63e841f988bbaa737561974867700",
+            "username": "kuno"
+        },
+        "service": {
+            "hostname": "frob.nl",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1397653878,
+    "expire_in": 157680000,
+    "prev": "44ccf960b8a089e72d13d6ee9d2c4213991f25ca277b43d6329926b3c24a1155",
+    "seqno": 3,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v0.1.8
+Comment: https://keybase.io/crypto
+
+yMHkAnicbZFfSFRZHMdHa8adCcWadMt/4FHoRaa5f/+MEW5m+mKDhJJlDPece+54
+N713undmzFVbtQfxYaG2ByEp9CEoiAyJXiybtQyjhjK1/yCiD82+KKwiCK6eK/bW
+eTmc7+/7/fzOj9+LzD0OT1rP2+D7o4Wee2mvE6mY48zpnngHgIbSDgId4CLeuVRN
+D2MzYmp6FAQAUkSoYCgokFJUjvJjnlGxKPgxp6hIZinMU4pAIQmUgWbDshMEA2UL
++zSDaOQR0hSi/sQf2ymoUOUZLLKUKokihLIsMALHU5LAirwg+P220cKmLrdiGx7T
+DdBVBogS1xBROnba7lZV04A+vYVEIqYRNZDRQsTmaDRiBexQtD1iu9owDO3mQ1DT
+FTIvScSxaWmGDgIUcaKoZgMpRhJ4jhEFsQzgyxHNxCHNdnACL/rJsfvgOEGyLEKq
+xPuhKPtFCQu0QjEKj7Gk0IilCUaiVJpDMi0IkCUVhpYkmocMolmZojiO9LfwJTJa
+gCHflMMEaWlhXY7GTAy6JhJNex1pHofLmW5vzOFxZ//YY8W7jK3qovyc/mDFUmQN
+ZfxzDLnHDv4Cna05W8OreUfuQ/D9jZUqGCufb1hOj+jjwdnixNqiN3tif8GNAd+j
+D0nnYHlscS69MOll1/9bmp3svlDsrSwF80PN8tyBhSuJGmfqefWz89N/5v49Hj5Z
+kdH520LdwNM+7XjBN3m0cGqfpd6dmXmctzFYlOu86VM3g67bm0Ovrrqdeb8+rHUP
+9FZWrednnQWNk/U1yazlREnq37nr031f/j/18trqkHewv9cRPucqeQDGRj6ilcN3
+Jk6U1Ian8v8Yzlr4/VDXJ93T1PlXfUNbchRmBxpvlS/X4c9oRF97slIltZZmst0b
+rq/bd2MJGQ==
+=22vD
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/kuno
+
+==================================================================
+

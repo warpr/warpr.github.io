@@ -9,6 +9,7 @@ from __future__ import unicode_literals
 # sudo apt-get install python-html5lib python-lxml python-iso8601 python-tz
 
 import os
+import sys
 import codecs
 import datetime
 import iso8601
@@ -32,8 +33,13 @@ def parse_html (filename):
 
 
 def parse_xml (filename):
-    with codecs.open (filename, "rb", "UTF-8") as f:
-        return lxml.etree.parse (f)
+    try:
+        with codecs.open (filename, "rb", "UTF-8") as f:
+            return lxml.etree.parse (f)
+    except lxml.etree.XMLSyntaxError as e:
+        print ("ERROR:", e)
+        print ("ERROR: parse error in", filename)
+        sys.exit (1)
 
 
 def parse_json (filename):
