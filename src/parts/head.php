@@ -2,6 +2,10 @@
   <title>Kuno Woudt, <?= $title ?></title>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="application/ld+json">
+  <?php include(dirname(__FILE__)."/../../me.jsonld"); ?>
+  </script>
+
 
 <?php if (getenv("FROB") == "static"): ?>
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">

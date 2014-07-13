@@ -6,7 +6,7 @@ from __future__ import print_function
 from __future__ import unicode_literals
 
 # requirements:
-# sudo apt-get install python-html5lib python-lxml python-iso8601 python-tz
+# sudo apt-get install python-cssselect python-html5lib python-lxml python-iso8601 python-tz
 
 import os
 import sys
@@ -348,7 +348,6 @@ if __name__ == '__main__':
     os.chdir (join (_root, 'activity'))
 
     events = sorted (itertools.chain (
-        bitbucket ("bitbucket.events.html"),
         github ("github.events.json"),
         pump ("identi.ca.json"),
         devblog ("blog.atom.xml"),

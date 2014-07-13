@@ -12,8 +12,6 @@ cd "$DIR/../activity"
 
 echo "Github events"
 $CURL --header 'Accept: application/json' 'https://api.github.com/users/warpr/events' > github.events.json
-echo "Bitbucket events"
-$CURL 'https://bitbucket.org/warp/profile/activity' > bitbucket.events.html
 echo "Twitter events"
 $CURL 'https://mobile.twitter.com/byld' > twitter.events.html
 echo "warpr.org events"

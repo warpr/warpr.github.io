@@ -16,8 +16,8 @@
   <div id="contact">
     <p><i class="fa fa-comments"></i> warp on <a href="https://www.freenode.net/">freenode irc</a></p>
     <p><i class="fa fa-skype"></i> kunowoudt</p>
-    <p><i class="fa fa-envelope"></i> <a class="email" property="foaf:mbox" href="mailto:kuno@frob.nl">kuno@frob.nl</a></p>
-    <p><i class="fa fa-phone"></i> <span class="tel" property="foaf:phone">+31 651 255 985</span></p>
+    <p><i class="fa fa-envelope"></i> <a class="email" href="mailto:kuno@frob.nl">kuno@frob.nl</a></p>
+    <p><i class="fa fa-phone"></i> <span class="tel">+31 651 255 985</span></p>
     <p><i class="fa fa-github"></i> <a class="github" href="https://github.com/warpr/">github.com/warpr</a></p>
   </div>
 

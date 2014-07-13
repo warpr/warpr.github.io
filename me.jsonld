@@ -1,0 +1,25 @@
+{
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "foaf": "http://xmlns.com/foaf/0.1/",
+        "schema": "http://schema.org/",
+        "foaf:homepage": { "@type": "@id" },
+        "foaf:img": { "@type": "@id" },
+        "foaf:mbox": { "@type": "@id" },
+        "schema:image": { "@type": "@id" },
+        "schema:url": { "@type": "@id" }
+    },
+    "@id": "https://frob.nl/#me",
+    "@type": [ "schema:Person", "foaf:Person" ],
+    "schema:email": "kuno@frob.nl",
+    "schema:familyName": "Woudt",
+    "schema:givenName": "Kuno",
+    "schema:image": "https://frob.nl/me.png",
+    "schema:telephone": "+31 651 255 985",
+    "schema:url": [ "https://frob.nl", "https://github.com/warpr/" ],
+    "foaf:homepage": [ "https://frob.nl", "https://github.com/warpr/" ],
+    "foaf:img": "https://frob.nl/me.png",
+    "foaf:mbox": "mailto:kuno@frob.nl",
+    "foaf:name": "Kuno Woudt",
+    "foaf:phone": "+31 651 255 985"
+}
