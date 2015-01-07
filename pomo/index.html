@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>pomo</title>
+        <meta charset="utf-8" />
+        <meta http-equiv="refresh" content="4000" />
+        <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes" />
+    </head>
+    <style>
+     html,body {
+         box-sizing: border-box;
+         padding: 0;
+         margin: 0;
+         border: 0;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         height: 100%;
+         font-family: verdana, arial, sans-serif;
+     }
+
+     body.work { background: #8a0721; }
+     body.break { background: #6800e8; }
+
+     #remaining {
+         flex: 1 1 auto;
+         color: #fff;
+         font-size: 96pt;
+     }
+    </style>
+    <script>
+     var update = function () {
+         "use strict";
+
+         var body = document.getElementsByTagName('body')[0];
+         var remaining = document.getElementById("remaining");
+
+         var d = new Date();
+         var minutes = d.getMinutes();
+         var working = true;
+         while (minutes >= 30) {
+             minutes -= 30;
+         }
+
+         var minutesRemaining = 24 - minutes;
+
+         if (minutes >= 25) {
+             working = false;
+             minutesRemaining = 29 - minutes;
+         }
+
+         if (working) {
+             body.setAttribute('class', 'work')
+         } else {
+             body.setAttribute('class', 'break')
+         }
+
+         var seconds = 59 - d.getSeconds();
+         if (seconds < 10) {
+             seconds = "0" + seconds;
+         }
+
+         remaining.innerHTML = minutesRemaining + ":" + seconds;
+     };
+
+     setInterval(update, 1000);
+    </script>
+    <body>
+        <div id="remaining">23:23</div>
+
+    </body>
+</html>
