@@ -12,6 +12,7 @@
          padding: 0;
          margin: 0;
          border: 0;
+         color: #fff;
          display: flex;
          align-items: center;
          justify-content: center;
@@ -22,10 +23,10 @@
      body.xrsz { background: #8a8a21; }
      body.work { background: #8a0721; }
      body.break { background: #6800e8; }
+     body.sleep { background: #000; color: #111; }
 
      #task {
          flex: 1 1 auto;
-         color: #fff;
          font-size: 96pt;
          padding: 0;
          margin: 0;
@@ -35,7 +36,8 @@
     </style>
     <script>
       var schedule = [
-         { start:  "0:00", name: "Sleep",   style: "break" },
+         { start:  "0:00", name: "Sleep",   style: "sleep" },
+         { start:  "6:00", name: "Wake up", style: "break" },
          { start:  "7:00", name: "Pomo 1",  style: "work"  },
          { start:  "7:25", name: "Pomo 1",  style: "break" },
          { start:  "7:30", name: "Pomo 2",  style: "work"  },
@@ -73,7 +75,9 @@
          { start: "16:40", name: "Pomo 16", style: "break" },
          { start: "16:45", name: "Pomo 17", style: "work"  },
          { start: "17:10", name: "Pomo 17", style: "break" },
-         { start: "17:15", name: "Done",    style: "break" }
+         { start: "17:15", name: "Done",    style: "break" },
+         { start: "22:30", name: "Sleep",   style: "sleep" },
+         { start: "24:00", name: "End of day", style: "sleep" }
      ];
 
      var i;
