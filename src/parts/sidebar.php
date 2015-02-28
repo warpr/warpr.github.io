@@ -4,7 +4,7 @@
     <img id="photo" src="/me.png" class="img-circle" />
   </div>
   <h1 class="h3">Kuno Woudt</h1>
-  <span id="timezone"><i class="fa fa-clock-o"></i> UTC+1</span>
+  <span id="timezone"><i class="fa fa-clock-o"></i> UTC-5</span>
 
   <div id="expanded-timezone">
     <p>
@@ -14,10 +14,11 @@
   </div>
 
   <div id="contact">
-    <p><i class="fa fa-comments"></i> warp on <a href="https://www.freenode.net/">freenode irc</a></p>
-    <p><i class="fa fa-skype"></i> kunowoudt</p>
+    <p><i class="fa fa-comments"></i> kuno on <a href="https://www.freenode.net/">freenode irc</a></p>
+    <p><i class="fa fa-skype"></i> <a href="skype:kunowoudt?call">kunowoudt</a></p>
+    <p><i class="fa fa-key"></i> <a href="https://keybase.io/kuno/">keybase</a></p>
     <p><i class="fa fa-envelope"></i> <a class="email" href="mailto:kuno@frob.nl">kuno@frob.nl</a></p>
-    <p><i class="fa fa-phone"></i> <span class="tel">+31 651 255 985</span></p>
+    <p><i class="fa fa-phone"></i> <span class="tel">+593 99 40 50 815</span></p>
     <p><i class="fa fa-github"></i> <a class="github" href="https://github.com/warpr/">github.com/warpr</a></p>
   </div>
 

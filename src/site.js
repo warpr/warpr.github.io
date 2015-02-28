@@ -69,8 +69,8 @@ var projects = function () {
 
     /* Slightly over-engineered time display... */
     var _g = { now: moment.utc () };
-    // var kuno_tz = 'America/Guayaquil';
-    var kuno_tz = 'Europe/Amsterdam';
+    var kuno_tz = 'America/Guayaquil';
+    // var kuno_tz = 'Europe/Amsterdam';
     var your_zone = moment().zone ();
 
     var update_time = function () {
