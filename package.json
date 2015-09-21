@@ -2,7 +2,7 @@
   "author": "Kuno Woudt <kuno@frob.nl>",
   "dependencies": {
     "bower": "~1.2.7",
-    "less": "^2.4.0",
+    "less": "^2.5.1",
     "moment-timezone": "0.0.3"
   },
   "description": "frob.nl",
