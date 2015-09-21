@@ -43,8 +43,12 @@ def parse_xml (filename):
 
 
 def parse_json (filename):
-    with codecs.open (filename, "rb", "UTF-8") as f:
-        return json.loads (f.read ())
+    try:
+        with codecs.open (filename, "rb", "UTF-8") as f:
+            return json.loads (f.read ())
+    except ValueError:
+        sys.stderr.write("Failed to parse " + filename + "\n")
+        return {}
 
 
 def fix_links (base_uri, dom):
@@ -238,6 +242,9 @@ def steam (filename):
     user = '<a href="http://steamcommunity.com/id/paksangsoo/">박상수</a>'
 
     for event in data:
+        if not 'last_played' in event:
+            continue
+
         dt = datetime.datetime.utcfromtimestamp(event["last_played"])
         game = '<a href="http://steamcommunity.com/app/%s">%s</a>' % (
             event["appid"], event["name"])
@@ -349,7 +356,7 @@ if __name__ == '__main__':
 
     events = sorted (itertools.chain (
         github ("github.events.json"),
-        pump ("identi.ca.json"),
+        # pump ("identi.ca.json"),
         devblog ("blog.atom.xml"),
         stackoverflow ("stackoverflow.atom.xml"),
         twitter ("twitter.events.html"),

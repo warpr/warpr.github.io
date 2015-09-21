@@ -49,7 +49,6 @@ var projects = function () {
 
         stagger += fadeshow_stagger;
     });
-
 };
 
 (function () {
@@ -85,14 +84,42 @@ var projects = function () {
         promise.done (function (data, status, $xhr) {
             _g.now = moment.utc($xhr.getResponseHeader ('Date'));
         });
-    }
+    };
+
+    var toggle_contact_info = function (event) {
+        event.preventDefault();
+        var $contact = $('#contact');
+        var $expandedTimezone = $('#expanded-timezone');
+        var duration = 300;
+
+        if ($contact.is(":visible")) {
+            $expandedTimezone.fadeTo(duration, 0, function () {
+                $expandedTimezone.slideUp(duration);
+            });
+
+            $contact.fadeTo(duration, 0, function () {
+                $contact.slideUp(duration);
+            });
+        } else {
+            $expandedTimezone.css("opacity", 0).slideDown(duration, function () {
+                $expandedTimezone.fadeTo(duration, 1);
+            });
+
+            $contact.css("opacity", 0).slideDown(duration, function () {
+                $contact.fadeTo(duration, 1);
+            });
+        }
+    };
 
     update_from_server ();
     setInterval (update_time, 1000);
     /* Don't trust client time, replace it with server time regularly. */
     setInterval (update_from_server, 9 * 60000);
 
-    $('#timezone').click (function () { $('#expanded-timezone').toggle (); });
+    // $('#timezone').click (function () { $('#expanded-timezone').toggle (); });
+    $('#timezone').click (toggle_contact_info);
+
+    $('.menu-item.contact').click (toggle_contact_info);
 
     /* Show top-secret archive link on hover. */
     $('.secret').hover (function (event) {

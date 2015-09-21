@@ -23,6 +23,7 @@
   </div>
 
   <div id="menu-wrapper">
+     <a class="menu-item contact" href="/"><div class="h4"><i class="fa fa-phone"></i>Contact</div></a>
      <a class="menu-item <?= $activity_selected ?>" href="/"><div class="h4"><i class="fa fa-star"></i>Activity</div></a>
      <a class="menu-item <?= $projects_selected ?>" href="/projects/"><div class="h4"><i class="fa fa-code"></i>Projects</div></a>
      <a class="menu-item" href="/cv/"><div class="h4"><i class="fa fa-inbox"></i>R&eacute;sum&eacute;</div></a>

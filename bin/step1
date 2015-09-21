@@ -4,7 +4,7 @@ SOURCE="${BASH_SOURCE[0]}"
 while [ -h "$SOURCE" ] ; do SOURCE="$(readlink "$SOURCE")"; done
 DIR="$( cd -P "$( dirname "$SOURCE" )" && pwd )"
 
-CURL="curl --silent"
+CURL="curl --silent --location"
 JSONINDENT="$DIR/jsonindent"
 
 mkdir -p "$DIR/../activity"
@@ -18,12 +18,12 @@ echo "warpr.org events"
 $CURL 'https://warpr.org/atom/' > warpr.org.atom.xml
 echo "frob.nl blog events"
 $CURL 'https://frob.nl/blog/atom/' > blog.atom.xml
-echo "identi.ca events"
-$CURL 'https://identi.ca/warp/' | grep initialData | sed 's/.*initialData = //' | sed 's/;$//' | $JSONINDENT > identi.ca.json
+# echo "identi.ca events"
+# $CURL 'https://identi.ca/warp/' | grep initialData | sed 's/.*initialData = //' | sed 's/;$//' | $JSONINDENT > identi.ca.json
 echo "stackoverflow events"
 $CURL 'http://stackoverflow.com/feeds/user/7700' > stackoverflow.atom.xml
 echo "steam recent games"
 # FIXME: this doesn't include the avatar.
-$CURL 'http://steamcommunity.com/id/paksangsoo/games/' | grep rgGames | sed 's/.*rgGames = //' | sed 's/\;\r//' | $JSONINDENT > steamgames.json
+$CURL 'http://steamcommunity.com/id/paksangsoo/games/' | grep rgGames | sed 's/.*rgGames = //' | sed 's/\;\r//' | sed 's/rgGames.*//' | $JSONINDENT > steamgames.json
 echo "done"
 
