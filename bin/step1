@@ -14,10 +14,10 @@ echo "Github events"
 $CURL --header 'Accept: application/json' 'https://api.github.com/users/warpr/events' > github.events.json
 echo "Twitter events"
 $CURL 'https://mobile.twitter.com/byld' > twitter.events.html
-echo "warpr.org events"
-$CURL 'https://warpr.org/atom/' > warpr.org.atom.xml
-echo "frob.nl blog events"
-$CURL 'https://frob.nl/blog/atom/' > blog.atom.xml
+# echo "warpr.org events"
+# $CURL 'https://warpr.org/atom/' > warpr.org.atom.xml
+# echo "frob.nl blog events"
+# $CURL 'https://frob.nl/blog/atom/' > blog.atom.xml
 # echo "identi.ca events"
 # $CURL 'https://identi.ca/warp/' | grep initialData | sed 's/.*initialData = //' | sed 's/;$//' | $JSONINDENT > identi.ca.json
 echo "stackoverflow events"
@@ -27,3 +27,5 @@ echo "steam recent games"
 $CURL 'http://steamcommunity.com/id/paksangsoo/games/' | grep rgGames | sed 's/.*rgGames = //' | sed 's/\;\r//' | sed 's/rgGames.*//' | $JSONINDENT > steamgames.json
 echo "done"
 
+# https://miiverse.nintendo.net/users/kuno-usa/posts
+# https://miiverse.nintendo.net/users/pak-sang-soo/posts

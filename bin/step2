@@ -357,7 +357,7 @@ if __name__ == '__main__':
     events = sorted (itertools.chain (
         github ("github.events.json"),
         # pump ("identi.ca.json"),
-        devblog ("blog.atom.xml"),
+        # devblog ("blog.atom.xml"),
         stackoverflow ("stackoverflow.atom.xml"),
         twitter ("twitter.events.html"),
         steam ("steamgames.json")
