@@ -1,22 +1,28 @@
 <?php
 
 $images = array(
-  "licensedb" => array(
-    "licensedb.about.png",
-    "licensedb.agplv3.png",
-    "licensedb.agplv3.json.png",
-    "licensedb.agplv3.rdf.png"),
-  "musicbrainz" => array(
-    "musicbrainz.kingdom.png",
-    "musicbrainz.koda-kumi.edit.png",
-    "musicbrainz.kingdom.credits-inline.png",
-    "musicbrainz.koda-kumi.json.png",
-    "musicbrainz.koda-kumi.xml.png",
-    "musicbrainz.coverartarchive.png"),
-  "quaestio" => array(
-    "quaestio.login.png", "quaestio.main.png", "quaestio.addnew.png"),
-  "waldmeta" => array("waldmeta.teaser.png", "waldmeta.senet.png")
-);
+    "followupboss" => array(
+        "followupboss2.view-person.png",
+        "followupboss2.add-task.png",
+        "followupboss.dashboard.png",
+        "followupboss.edit-action-plan.png",
+        "followupboss.view-person.png"),
+    "licensedb" => array(
+        "licensedb.about.png",
+        "licensedb.agplv3.png",
+        "licensedb.agplv3.json.png",
+        "licensedb.agplv3.rdf.png"),
+    "musicbrainz" => array(
+        "musicbrainz.kingdom.png",
+        "musicbrainz.koda-kumi.edit.png",
+        "musicbrainz.kingdom.credits-inline.png",
+        "musicbrainz.koda-kumi.json.png",
+        "musicbrainz.koda-kumi.xml.png",
+        "musicbrainz.coverartarchive.png"),
+    "quaestio" => array(
+        "quaestio.login.png", "quaestio.main.png", "quaestio.addnew.png"),
+    "waldmeta" => array("waldmeta.teaser.png", "waldmeta.senet.png")
+    );
 
 function fadeshow($name, $title) {
   global $images;
@@ -67,17 +73,42 @@ function lightbox($name, $title) {
 
   <header id="projects-header">
     <h1>Projects</h1>
-    <p>I am a web developer based in Rotterdam.</p>
+    <p>I am a web developer based in <a href="https://en.wikipedia.org/wiki/Guayaquil">Guayaquil</a>.</p>
     <p>
-      This page contains examples of my <a href="#work">professional work</a>
-      and <a href="#side">side projects</a> I have worked on in the past few years.
+      This page lists what I am working on <a href="#now">right now</a>
+      and a few <a href="#past">projects</a> I have worked on in the past.
     </p>
     <p class="sign">
       &#x301C; <a href="https://frob.nl/cv/">Kuno Woudt</a>.
     </p>
   </header>
 
-  <a id="side"></a>
+  <a id="now"></a>
+
+  <section class="followupboss clearfix row">
+    <?php lightbox("followupboss", "Follow Up Boss Screenshots"); ?>
+    <?php fadeshow("followupboss", "Follow Up Boss"); ?>
+
+    <div class="details col-md-12 col-lg-6">
+      <div class="description">
+        <p>
+          <a href="https://www.followupboss.com">Follow Up Boss</a> is a
+          real estate lead management system that allows you to automatically
+          distribute and follow up leads from over 200 different lead sources.
+        </p>
+      </div>
+
+      <div class="attributes">
+        <span class="key">date</span> <span class="date">January 2014 &mdash; </span><br />
+        <span class="key">tech</span>
+        <span class="label label-lang">PHP</span>
+        <span class="label label-lang">Javascript</span>
+        <span class="label label-tech">React</span>
+        <span class="label label-tech">AWS</span>
+      </div>
+    </div>
+  </section>
+
   <section class="licensedb clearfix row">
 
     <?php lightbox("licensedb", "LicenseDB Screenshots"); ?>
@@ -90,8 +121,8 @@ function lightbox($name, $title) {
           is intended to be a metadata database about open source
           / free software / free culture copyright licenses.  The
           database is implemented as a set of git versioned turtle
-          files, from which HTML/RDFa, RDF/XML and JSON-LD files
-          are generated.  A hodge podge of scripts glue everything
+          files, from which HTML, RDF/XML and JSON-LD files are
+          generated.  A hodge podge of scripts glue everything
           together.  I would like to reimplement all of this in a
           more coherent manner.
         </p>
@@ -123,9 +154,8 @@ function lightbox($name, $title) {
           such as
           <a href="http://www.markus-lanthaler.com/hydra/">Hydra</a>
           and <a href="http://json-ld.org/">JSON-LD</a>.
-          It is currently in development, but should in the near
-          future be used to run
-          <a href="https://licensedb.org/">LicenseDB</a>.  It will
+          It is currently in development, and will eventually be used
+          to run <a href="https://licensedb.org/">LicenseDB</a>.  It will
           also run <a href="https://senet.org">senet.org</a>, a
           MusicBrainz inspired videogame database.
         </p>
@@ -145,7 +175,8 @@ function lightbox($name, $title) {
 
   <div class="spacer">&#x2766;</div>
 
-  <a id="work"></a>
+  <a id="past"></a>
+
   <section class="musicbrainz clearfix row">
 
     <?php lightbox("musicbrainz", "MusicBrainz Screenshots"); ?>
