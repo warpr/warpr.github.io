@@ -10,7 +10,7 @@
     <div class="container">
       <div class="row">
         <?php require('parts/sidebar.php'); ?>
-        <?php require('parts/projects.php'); ?>
+        <?php require('parts/now.php'); ?>
       </div>
     </div>
     <?php require('parts/foot.php');  ?>
