@@ -73,7 +73,8 @@ function lightbox($name, $title) {
 
   <header id="projects-header">
     <h1>Projects</h1>
-    <p>I am a web developer based in <a href="https://en.wikipedia.org/wiki/Guayaquil">Guayaquil</a>.</p>
+    <p>I am a <a href="https://en.wikipedia.org/wiki/Netherlands">Dutch</a> web developer based
+    in <a href="https://en.wikipedia.org/wiki/Guayaquil">Guayaquil</a>.</p>
     <p>
       This page lists what I am working on <a href="#now">right now</a>
       and a few <a href="#past">projects</a> I have worked on in the past.
@@ -130,7 +131,7 @@ function lightbox($name, $title) {
 
       <div class="attributes">
         <span class="key">date</span> <span class="date">February 2012 &mdash;</span><br />
-        <span class="key">code</span> <a href="https://gitorious.org/licensedb/licensedb/">https://gitorious.org/licensedb/licensedb/</a><br />
+        <span class="key">code</span> <a href="https://gitlab.com/kuno/licensedb/">https://gitlab.com/kuno/licensedb/</a><br />
         <span class="key">tech</span>
         <span class="label label-tech">RDF</span>
         <span class="label label-tech">node.js</span>
@@ -163,12 +164,14 @@ function lightbox($name, $title) {
 
       <div class="attributes">
         <span class="key">date</span> <span class="date">May 2013 &mdash;</span><br />
-        <span class="key">code</span> <a href="https://gitorious.org/wald/">https://gitorious.org/wald/</a><br />
+        <span class="key">code</span> <a href="https://github.com/warpr/wald-data/">https://github.com/warpr/wald-data/</a><br />
+        <span class="key">    </span> <a href="https://gitlab.com/kuno/waldjs/">https://gitlab.com/kuno/waldjs/</a><br />
         <span class="key">tech</span>
+        <span class="label label-tech">Linked Data</span>
         <span class="label label-tech">RDF</span>
-        <span class="label label-tech">Python</span>
         <span class="label label-lang">Javascript</span>
-        <span class="label label-lang">CouchDB</span>
+        <span class="label label-tech">Python</span>
+        <span class="label label-lang">React</span>
       </div>
     </div>
   </section>
