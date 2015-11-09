@@ -1,0 +1,4 @@
+#!/bin/bash
+
+docker build --tag="frob/frob.nl" .
+
