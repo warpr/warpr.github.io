@@ -1,8 +1,11 @@
 {
   "author": "Kuno Woudt <kuno@frob.nl>",
   "dependencies": {
-    "bower": "~1.2.7",
+    "bootstrap": "^3.3.5",
+    "font-awesome": "^4.4.0",
+    "jquery": "^2.1.4",
     "less": "^2.5.3",
+    "moment": "^2.10.6",
     "moment-timezone": "0.0.3"
   },
   "description": "frob.nl",

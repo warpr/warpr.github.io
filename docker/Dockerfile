@@ -43,9 +43,10 @@ RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 RUN sudo apt-get install -y nodejs
 
 RUN npm install
-RUN node_modules/.bin/bower install --allow-root
 
 RUN git pull
+
+RUN node_modules/.bin/bower install --allow-root
 
 RUN bin/step1
 RUN bin/step2
