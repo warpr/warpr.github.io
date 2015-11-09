@@ -19,7 +19,8 @@ RUN apt-get -y install build-essential curl git php5-cli php5-fpm wget \
     python-cssselect python-html5lib python-lxml python-iso8601 python-tz \
     libpython-dev nginx python-virtualenv python-pip php5-json php5-readline
 
-# RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
+RUN sudo apt-get install -y nodejs
 
 COPY ssh/gitlab.deployment.key /root/.ssh/id_rsa
 COPY ssh/gitlab.deployment.pub /root/.ssh/id_rsa.pub
@@ -39,13 +40,14 @@ COPY ssl/frob.nl.2014.bundle.crt   /etc/ssl/
 COPY nginx/frob.nl.conf            /etc/nginx/conf.d/
 COPY nginx/service.sh              /etc/service/nginx/run
 
-RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
-RUN sudo apt-get install -y nodejs
-
-RUN git pull
-
 RUN npm install
 
 RUN bin/step1
 RUN bin/step2
 RUN bin/step3
+
+RUN echo "47  *  * * *         /var/www/frob.nl/bin/update" > /var/spool/cron/crontabs/root
+
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+
+
