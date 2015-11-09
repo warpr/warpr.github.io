@@ -42,11 +42,9 @@ COPY nginx/service.sh              /etc/service/nginx/run
 RUN curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
 RUN sudo apt-get install -y nodejs
 
-RUN npm install
-
 RUN git pull
 
-RUN node_modules/.bin/bower install --allow-root
+RUN npm install
 
 RUN bin/step1
 RUN bin/step2
