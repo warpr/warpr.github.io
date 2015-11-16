@@ -39,6 +39,9 @@ RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx/frob.nl.conf            /etc/nginx/conf.d/
 COPY nginx/service.sh              /etc/service/nginx/run
 
+COPY server.js                     /root/server.js
+COPY hello-internet/service.sh     /etc/service/hello-internet/run
+
 RUN npm install
 
 RUN bin/step1
