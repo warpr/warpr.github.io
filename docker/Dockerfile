@@ -38,6 +38,9 @@ RUN rm /etc/nginx/conf.d/default.conf
 
 COPY nginx/frob.nl.conf            /etc/nginx/conf.d/
 COPY nginx/service.sh              /etc/service/nginx/run
+COPY php/service.sh                /etc/service/php/run
+
+RUN sed --in-place 's,/var/run/php5-fpm.sock,127.0.0.1:9000,' /etc/php5/fpm/pool.d/www.conf
 
 COPY server.js                     /root/server.js
 COPY hello-internet/service.sh     /etc/service/hello-internet/run
