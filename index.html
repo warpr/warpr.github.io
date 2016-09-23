@@ -1,25 +1,122 @@
 <!doctype html>
-<html amp lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Hello, AMPs</title>
-    <link rel="canonical" href="http://example.ampproject.org/article-metadata.html" />
-    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-    <script type="application/ld+json">
-      {
-        "@context": "http://schema.org",
-        "@type": "NewsArticle",
-        "headline": "Open-source framework for publishing content",
-        "datePublished": "2015-10-07T12:02:41Z",
-        "image": [
-          "logo.jpg"
-        ]
-      }
-    </script>
-    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
-    <script async src="https://cdn.ampproject.org/v0.js"></script>
-  </head>
-  <body>
-    <h1>Welcome to the mobile web</h1>
-  </body>
+<html ⚡ lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Kuno Woudt</title>
+        <link rel="canonical" href="https://frob.nl" />
+        <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+        <meta http-equiv="refresh" content="3600" />
+        <script type="application/ld+json">
+    {
+        "@context": {
+            "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+            "foaf": "http://xmlns.com/foaf/0.1/",
+            "schema": "http://schema.org/",
+            "foaf:homepage": { "@type": "@id" },
+            "foaf:img": { "@type": "@id" },
+            "foaf:mbox": { "@type": "@id" },
+            "schema:image": { "@type": "@id" },
+            "schema:url": { "@type": "@id" }
+        },
+        "@id": "https://frob.nl/#me",
+        "@type": [ "schema:Person", "foaf:Person" ],
+        "schema:email": "kuno@frob.nl",
+        "schema:familyName": "Woudt",
+        "schema:givenName": "Kuno",
+        "schema:image": "https://frob.nl/me.png",
+        "schema:telephone": "+593 999 50 91 89",
+        "schema:url": [ "https://frob.nl", "https://github.com/warpr/" ],
+        "foaf:homepage": [ "https://frob.nl", "https://github.com/warpr/" ],
+        "foaf:img": "https://frob.nl/me.png",
+        "foaf:mbox": "mailto:kuno@frob.nl",
+        "foaf:name": "Kuno Woudt",
+        "foaf:phone": "+593 999 50 9189"
+    }
+        </script>
+        <style amp-boilerplate>
+         body {
+             -webkit-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+             -moz-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+             -ms-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
+             animation: -amp-start 8s steps(1,end) 0s 1 normal both
+         }
+         @-webkit-keyframes -amp-start { from { visibility: hidden } to { visibility: visible } }
+         @-moz-keyframes -amp-start { from { visibility: hidden } to { visibility: visible } }
+         @-ms-keyframes -amp-start { from { visibility: hidden } to { visibility: visible } }
+         @-o-keyframes -amp-start { from { visibility: hidden } to { visibility: visible } }
+         @keyframes -amp-start { from { visibility: hidden } to { visibility: visible } }
+        </style>
+        <noscript>
+            <style amp-boilerplate>
+             body {
+                 -webkit-animation: none;
+                 -moz-animation: none;
+                 -ms-animation: none;
+                 animation: none
+             }
+            </style>
+        </noscript>
+        <style>
+          .button-link {
+              background: transparent;
+              border: 0;
+              cursor: pointer;
+          }
+
+          #sidebar {
+              width: 320px;
+              min-width: 320px;
+          }
+
+          #sidebar .menu-close {
+              float: right;
+              top: 16px;
+              margin-right: 16px;
+              font-size: inherit;
+          }
+
+          #sidebar .menu-header {
+              background: #8f8;
+              margin-top: 16px;
+              margin-left: 16px;
+              font-size: 16px;
+          }
+        </style>
+        <script async src="https://cdn.ampproject.org/v0.js"></script>
+        <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    </head>
+    <body>
+
+      <amp-sidebar id="sidebar" layout="nodisplay" side="left" width="320">
+        <h1 class="menu-header">
+          Contact
+          <button class="menu-close button-link" on="tap:sidebar.close"><i class="fa fa-times"></i></button>
+        </h1>
+        <hr />
+        <ul>
+          <li><i class="fa fa-comments"></i> kuno on <a href="https://www.freenode.net/">freenode irc</a></li>
+          <li><i class="fa fa-twitter"></i> <a href="https://twitter.com/byld/">@byld</a></li>
+          <li><i class="fa fa-github"></i> <a class="github" href="https://github.com/warpr/">github.com/warpr</a></li>
+          <li><i class="fa fa-key"></i> <a href="https://keybase.io/kuno/">keybase</a></li>
+          <li><i class="fa fa-envelope"></i> <a class="email" href="mailto:kuno@frob.nl">kuno@frob.nl</a></li>
+          <li><i class="fa fa-skype"></i> <a href="skype:kunowoudt?call">kunowoudt</a></li>
+          <li><i class="fa fa-phone"></i> <span class="tel">+593 99 40 50 815</span></li>
+          <li><i class="fa fa-file-pdf-o"></i> <a class="resume" href="https://frob.nl/cv/">frob.nl/cv</a></li>
+        </ul>
+      </amp-sidebar>
+
+      <button class="button-link" on="tap:sidebar.open"><i class="fa fa-bars"></i></button>
+
+      <h1>Hello!<br />I am Kuno Woudt</h1>
+      <p>I build web applications.</p>
+
+
+
+
+
+      <!--
+      <amp-img src="me.240w.jpg" srcset="me.480w.jpg 480w, me.240w.jpg 240w" width="480" height="480" layout="responsive" alt="Photo of Kuno" />
+-->
+    </body>
 </html>
