@@ -140,6 +140,9 @@
          section.contact ul { padding: 4px 0; list-style: none; }
          section.contact li { padding: 8px 4px; font-size: 24px; }
          section.contact li i.fa { width: 30px; }
+         iframe {
+             vertical-align: bottom;
+         }
 
          /* code block */
         </style>
@@ -152,7 +155,7 @@
         <section class="links">
             <h1>Hi, I'm Kuno</h1>
             <p class="big">
-                I build web applications.
+                I'm a full-stack web developer from Rotterdam, now living in Guayaquil.
             </p>
             <div class="icons">
                 <span><a href="https://twitter.com/byld/" target="_blank" title="@byld"><i class="fa fa-twitter"></i></a></span>
@@ -174,7 +177,6 @@
             </div>
         </section>
 
-
         <section class="links">
             <h1>Code</h1>
             <div class="icons">
@@ -194,12 +196,19 @@
                         </span>
                     </h1>
                 </div>
-                <ul class="icons">
-                    <li><i class="fa fa-whatsapp"></i> <a href="tel:+593999509189">+593 999 50 91 89</a></li>
-                    <li><i class="fa fa-hashtag"></i> kuno on <a target="_blank" href="https://www.freenode.net/">freenode irc</a></li>
-                    <li><i class="fa fa-envelope"></i> <a class="email" href="mailto:kuno@frob.nl">kuno@frob.nl</a></li>
-                    <li><i class="fa fa-skype"></i> <a href="skype:kunowoudt?call">kunowoudt</a></li>
-                </ul>
+                <div>
+                    <ul class="icons">
+                        <li><i class="fa fa-clock-o"></i> <a href="http://time.is/Guayaquil">UTC-5</a> &mdash; 7:24 AM</li>
+                        <li>
+                            <i class="fa fa-clock-o"></i>
+                            <iframe src="time.html" frameborder="0" scrolling="no" width="220" height="26"></iframe>
+                        </li>
+                        <li><i class="fa fa-whatsapp"></i> <a href="tel:+593999509189">+593 999 50 91 89</a></li>
+                        <li><i class="fa fa-hashtag"></i> kuno on <a target="_blank" href="https://www.freenode.net/">freenode irc</a></li>
+                        <li><i class="fa fa-envelope"></i> <a class="email" href="mailto:kuno@frob.nl">kuno@frob.nl</a></li>
+                        <li><i class="fa fa-skype"></i> <a href="skype:kunowoudt?call">kunowoudt</a></li>
+                    </ul>
+                </div>
             </section>
         </amp-accordion>
 
