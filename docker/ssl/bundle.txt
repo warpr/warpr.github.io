@@ -1,5 +1,0 @@
-
-Domain first, then intermediate, e.g.:
-
-    cat testloop.org.2013.crt GandiStandardSSLCA.pem > testloop.org.2013.bundle.crt
-

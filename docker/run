@@ -1,8 +1,0 @@
-#!/bin/bash
-
-OPTIONS=""
-OPTIONS="$OPTIONS --rm=true"
-OPTIONS="$OPTIONS --interactive --tty"
-OPTIONS="$OPTIONS --publish=8300:80"
-
-docker run $OPTIONS "frob/frob.nl" "$@"

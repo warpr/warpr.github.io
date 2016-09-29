@@ -1,5 +1,0 @@
-
-fastmail.fm config:
-
-http://autoconfig.fastmail.fm/mail/config-v1.xml?emailaddress=kuno@frob.nl
-
