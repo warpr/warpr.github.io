@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
-        <meta http-equiv="refresh" content="60" />
         <style>
          html { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
          body {
@@ -18,13 +17,24 @@
          a { text-decoration: none; }
          *, *:before, *:after { box-sizing: border-box; }
 
-         div { font-size: 24px; padding-top: 2px; }
+         div { font-size: 18px; padding-top: 2px; min-width: 320px; }
         </style>
+        <script src="node_modules/moment/min/moment.min.js"></script>
     </head>
     <body>
         <div>
             <a target="_blank" href="http://time.is/Guayaquil">UTC-5</a>
-            &mdash; 7:36&nbsp;AM
+            &mdash; <span id="time"></span>
         </div>
+        <script>
+         var timeSpan = document.getElementById("time");
+
+         function updateTime() {
+             timeSpan.innerHTML = moment().format("h:mm:ss A");
+         }
+
+         updateTime();
+         setInterval(updateTime, 1000);
+        </script>
     </body>
 </html>
