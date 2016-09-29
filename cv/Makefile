@@ -1,5 +1,5 @@
 
-all: cv.json cv.private.pdf index.html
+all: cv.json cv.private.pdf
 
 cv.json: cv.html docraptor.py
 	python ./docraptor.py
@@ -7,5 +7,3 @@ cv.json: cv.html docraptor.py
 cv.private.pdf: cv.html
 	/usr/bin/prince $< $@
 
-index.html: cv.html
-	ln -s $< $@
