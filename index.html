@@ -28,29 +28,7 @@
              ]
          }
         </script>
-        <style amp-boilerplate>
-         body {
-             -webkit-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
-             -moz-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
-             -ms-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
-             animation: -amp-start 8s steps(1,end) 0s 1 normal both
-         }
-         @-webkit-keyframes -amp-start { from { visibility: hidden } to { visibility: visible } }
-         @-moz-keyframes -amp-start { from { visibility: hidden } to { visibility: visible } }
-         @-ms-keyframes -amp-start { from { visibility: hidden } to { visibility: visible } }
-         @-o-keyframes -amp-start { from { visibility: hidden } to { visibility: visible } }
-         @keyframes -amp-start { from { visibility: hidden } to { visibility: visible } }
-        </style>
-        <noscript>
-            <style amp-boilerplate>
-             body {
-                 -webkit-animation: none;
-                 -moz-animation: none;
-                 -ms-animation: none;
-                 animation: none
-             }
-            </style>
-        </noscript>
+        <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
         <style amp-custom>
          /* reset */
          html { -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }
@@ -89,10 +67,10 @@
          /* amp-accordion */
          section[expanded] .visible-when-collapsed { display: none; }
          section:not([expanded]) .visible-when-expanded { display: none; }
-         section .-amp-accordion-header { background: transparent; }
-         section .-amp-accordion-header { border: 0; padding: 0; }
-         section.accordion h1 { display: flex; justify-content: space-between; }
-         section.accordion h1 span.icon { width: 30px; text-align: center; }
+         section.accordion h1 { background: transparent; }
+         section.accordion h1 { border: 0; padding: 0; }
+         section.accordion h1 div { display: flex; justify-content: space-between; }
+         section.accordion h1 div span.icon { width: 30px; text-align: center; }
 
          /* colours */
          body { background: #444; color: #fff; }
@@ -113,13 +91,13 @@
              max-width: 400px;
          }
 
-         section.links h1 {
+         section.links h1 div {
              padding-top: 2em;
              border-style: solid;
              border-width: 0 0 2px 0;
          }
 
-         h1 { padding: 6px 0; margin: 6px 0; }
+         h1 div { padding: 6px 0; margin: 6px 0; }
          p { padding: 6px 0; }
          div.extra { margin-bottom: 50px; }
 
@@ -166,13 +144,16 @@
         </style>
         <script async src="https://cdn.ampproject.org/v0.js"></script>
         <script async custom-element="amp-accordion" src="https://cdn.ampproject.org/v0/amp-accordion-0.1.js"></script>
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous" />
+        <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" />
     </head>
     <body>
         <div class="all">
             <div class="main">
                 <section class="links">
-                    <h1>Hi, I'm Kuno</h1>
+                    <h1>
+                        <div>Hi, I'm Kuno</div>
+                    </h1>
                     <p class="big">
                         I'm a full-stack web developer from Rotterdam, now living in Guayaquil.
                     </p>
@@ -184,7 +165,7 @@
                                      version="1.1" x="0px" y="0px" viewBox="0 0 100 125">
                                     <g transform="translate(0,-952.36218)">
                                         <path d="m 18,957.36218 c -1.0472,1e-4 -1.9999,0.95283 -2,2 l 0,86.00002 c 0,0.9868 0.8983,1.997 2,2 l 64,0 c 1.0472,-10e-5 1.9999,-0.9528 2,-2 l 0,-72.00002 c 0,-0.522 -0.2225,-1.0392 -0.5938,-1.4062 l -14,-14.00005 C 69.0391,957.58471 68.522,957.36618 68,957.36218 l -50,0 z m 2,4 46,0 0,12 c 0.013,0.9283 0.7847,1.998 2,2 l 12,0 0,68.00002 -60,0 0,-82.00002 z m 50,2.84375 7.1562,7.15625 -7.1562,0 0,-7.15625 z m -20,12.15625 c -3.3137,0 -6,2.6863 -6,6 0,3.3137 2.6863,6 6,6 3.3137,0 6,-2.6863 6,-6 0,-3.3137 -2.6863,-6 -6,-6 z m 0,14 c -6,0 -13,2 -13,10.00002 l 26,0 c 0,-8.00002 -7,-10.00002 -13,-10.00002 z m -20,17.00002 c -1.1046,0 -2,0.8954 -2,2 0,1.1046 0.8954,2 2,2 l 40,0 c 1.1046,0 2,-0.8954 2,-2 0,-1.1046 -0.8954,-2 -2,-2 l -40,0 z m 0,12 c -1.1046,0 -2,0.8954 -2,2 0,1.1046 0.8954,2 2,2 l 40,0 c 1.1046,0 2,-0.8954 2,-2 0,-1.1046 -0.8954,-2 -2,-2 l -40,0 z m 0,12 c -1.1046,0 -2,0.8954 -2,2 0,1.1046 0.8954,2 2,2 l 40,0 c 1.1046,0 2,-0.8954 2,-2 0,-1.1046 -0.8954,-2 -2,-2 l -40,0 z"
-                                              fill="currentColor" fill-opacity="1" stroke="none" marker="none"
+                                              fill="currentColor" fill-opacity="1" stroke="none"
                                               visibility="visible" display="inline" overflow="visible" />
                                     </g>
                                 </svg>
@@ -202,20 +183,25 @@
             <div class="extra">
                 <amp-accordion animate>
                     <section class="links accordion contact">
-                        <div>
-                            <h1>
+                        <h1>
+                            <div>
                                 <span>Contact</span>
                                 <span class="icon">
                                     <!-- use ellipsis-v for android, -h for iOS? -->
                                     <i class="fa fa-ellipsis-h"></i>
                                 </span>
-                            </h1>
-                        </div>
+                            </div>
+                        </h1>
                         <div>
                             <ul class="icons">
                                 <li>
                                     <i class="fa fa-clock-o"></i>
-                                    <iframe src="time.html?t=1" frameborder="0" scrolling="no" width="220" height="20"></iframe>
+                                    <amp-iframe
+                                        width="220" height="20"
+                                        src="https://frob.nl/time.html" sandbox="allow-scripts"
+                                        frameborder="0" scrolling="no">
+                                        <span placeholder>UTC-5</span>
+                                    </amp-iframe>
                                 </li>
                                 <li><i class="fa fa-whatsapp"></i> <a href="tel:+593999509189">+593 999 50 91 89</a></li>
                                 <li><i class="fa fa-hashtag"></i> kuno on <a target="_blank" href="https://www.freenode.net/">freenode irc</a></li>
@@ -228,15 +214,15 @@
 
                 <amp-accordion animate>
                     <section class="links accordion colophon">
-                        <div>
-                            <h1>
+                        <h1>
+                            <div>
                                 <span>Colophon</span>
                                 <span class="icon">
                                     <!-- use ellipsis-v for android, -h for iOS? -->
                                     <i class="fa fa-ellipsis-h"></i>
                                 </span>
-                            </h1>
-                        </div>
+                            </div>
+                        </h1>
                         <div>
                             <p>
                                 Copyright 2002&ndash;2016 Kuno Woudt.
