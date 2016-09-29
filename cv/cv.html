@@ -3,98 +3,106 @@
     <title>Kuno Woudt, Curriculum Vitae</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.css">
+    <meta http-equiv="refresh" content="10" />
     <style type="text/css">
+     @page {
+         size: A4;
+         margin: 2cm;
+         border: 0;
+         padding: 0;
+     }
 
-@page {
-    size: A4;
-    margin: 2cm;
-    border: 0;
-    padding: 0;
-}
+     div.download { display: none; }
+     div.home { display: none; }
 
-div.download { display: none; }
-div.home { display: none; }
+     @media screen {
+         div.home { display: block; }
+         div.download { display: block; float: left; text-align: left; }
+         div.personal { margin-top: 5em; }
+         .section { margin-left: 5em; width: 50em; text-align: left; }
+     }
 
-@media screen {
-    div.home { display: block; }
-    div.download { display: block; float: left; text-align: left; }
-    div.personal { margin-top: 5em; }
-    .section { margin-left: 5em; width: 50em; text-align: left; }
-}
+     .clearfix:before,
+     .clearfix:after { content: " "; display: table; }
+     .clearfix:after { clear: both; }
 
-.clearfix:before,
-.clearfix:after { content: " "; display: table; }
-.clearfix:after { clear: both; }
+     div.home { float: left; padding: 1em; }
+     div.home a { font-size: 200%; color: #444; }
+     div.home a:hover { color: #000; }
 
-div.home { float: left; padding: 1em; }
-div.home a { font-size: 200%; color: #444; }
-div.home a:hover { color: #000; }
+     .menu-item {
+         display: block;
+         width: 100%;
+         padding: 10px 0;
+         margin: 0;
+         font-size: 14px;
+         text-align: center;
+         text-transform: uppercase;
+     }
+     .menu-item.selected { background: #ccc; float: right; }
+     .menu-item i {
+         padding-right: 16px;
+         display: inline-block;
+     }
+     .menu-item:hover { background: #ddd; }
 
+     body {
+         font-family: arial, sans-serif;
+         font-size: 10pt;
+         color: #000;
+         margin: 0;
+         border: 0;
+         padding: 0;
+     }
 
-.menu-item {
-  display: block;
-  width: 100%;
-  padding: 10px 0;
-  margin: 0;
-  font-size: 14px;
-  text-align: center;
-  text-transform: uppercase;
-}
-.menu-item.selected { background: #ccc; float: right; }
-.menu-item i {
-  padding-right: 16px;
-  display: inline-block;
-}
-.menu-item:hover { background: #ddd; }
+     p.clear, h1, h2, h3, h4 { clear: both; }
+     .outdated { display: none; }
+     .job { page-break-inside: avoid; }
 
-body {
-    font-family: arial, sans-serif;
-    font-size: 10pt;
-    color: #000;
-    margin: 0;
-    border: 0;
-    padding: 0;
-}
+     .download, .cvkuno, .cvtitle {
+         text-transform: uppercase;
+         font-weight: bolder;
+         margin: 0;
+         text-align: right;
+         font-size: 16pt;
+     }
+     .cvtitle { color: #444; font-size: 12pt; }
+     .download { color: #444; font-size: 12pt; }
+     span.cvsep { color: #000; }
 
-p.clear, h1, h2, h3, h4 { clear: both; }
-.outdated { display: none; }
-.job { page-break-inside: avoid; }
+     table.left { float: left; }
+     table.right { margin-left: 10em; float: left; }
+     td { vertical-align: top; }
+     td:first-child { color: #444; padding-right: 1em; }
 
-.download, .cvkuno, .cvtitle {
-    text-transform: uppercase;
-    font-weight: bolder;
-    margin: 0;
-    text-align: right;
-    font-size: 16pt;
-}
-.cvtitle { color: #444; font-size: 12pt; }
-.download { color: #444; font-size: 12pt; }
-span.cvsep { color: #000; }
+     h2 {
+         font-size: 12pt;
+         font-weight: bolder;
+         margin: 2em 0 1em 0;
+         border-bottom: 1px solid #888;
+         text-transform: uppercase;
+     }
+     .cvdate { font-size: 10pt; font-weight: bolder; margin: 1em 0 0 0; }
+     .cvfunc { font-size: 10pt; font-weight: normal; margin: 0; color: #444; }
 
-table.left { float: left; }
-table.right { margin-left: 10em; float: left; }
-td { vertical-align: top; }
-td:first-child { color: #444; padding-right: 1em; }
+     li { font-weight: normal; }
+     a { color: inherit; text-decoration: inherit; }
+     p { font-weight: normal; font-size: 10pt; }
+     p.cvjust { text-align: justify; }
 
-h2 {
-    font-size: 12pt;
-    font-weight: bolder;
-    margin: 2em 0 1em 0;
-    border-bottom: 1px solid #888;
-    text-transform: uppercase;
-}
-.cvdate { font-size: 10pt; font-weight: bolder; margin: 1em 0 0 0; }
-.cvfunc { font-size: 10pt; font-weight: normal; margin: 0; color: #444; }
+     em { font: inherit; font-weight: 600; }
 
-li { font-weight: normal; }
-a { color: inherit; text-decoration: inherit; }
-p { font-weight: normal; font-size: 10pt; }
-p.cvjust { text-align: justify; }
+     span.cvspan { text-align: left; }
+     span.cvjust { text-align: justify; }
 
-em { font: inherit; font-weight: 600; }
+     table.languages { width: 100%; }
+     table.languages td { font-size: 10pt; }
+     table.languages td.level { font-weight: bold; }
+     table.languages td.desc { text-align: right; font-style: italic; }
 
-span.cvspan { text-align: left; }
-span.cvjust { text-align: justify; }
+     table.details { width: 100%; }
+     table.details td { font-size: 10pt; padding: 0.2em 0.2em 0.2em 0; }
+     table.details td.field { width: 5em; }
 
     </style>
   </head>
@@ -110,29 +118,19 @@ span.cvjust { text-align: justify; }
       <div class="cvkuno">Kuno Woudt</div>
       <div class="cvtitle">Curriculum Vitae</div>
 
-      <h2>personal details</h2>
-      <table class="left">
-        <tr><td>name</td><td>Jacobus Louis Woudt</td></tr>
-        <tr><td>email</td><td>kuno@frob.nl</td></tr>
-        <tr><td>URL</td><td><a href="https://frob.nl">frob.nl</a></td></tr>
-        <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-        <tr><td>phone</td><td>+593 99 4050 815</td></tr>
-        <tr><td></td><td>+31 651 255 985</td></tr>
-      </table>
-      <table class="right">
-        <tr><td><abbr title="Date of birth">DOB</abbr></td><td>1976, July 23rd</td></tr>
-        <tr><td><abbr title="Place of birth">POB</abbr></td><td>Leeuwarden, the Netherlands</td></tr>
-        <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-        <tr><td>nationality</td><td>Dutch</td></tr>
-        <tr><td>&nbsp;</td><td>&nbsp;</td></tr>
-        <tr><td>location</td><td>Ecuador</td></tr>
+      <h2>Personal details</h2>
+      <table class="left details">
+          <tr><td class="field">name</td>  <td class="value">Jacobus Louis Woudt</td></tr>
+          <tr><td class="field">email</td> <td class="value">kuno@frob.nl</td></tr>
+          <tr><td class="field">URL</td>   <td class="value"><a href="https://frob.nl/#me">frob.nl</a></td></tr>
+          <tr><td class="field">phone</td> <td class="value">+593 999 50 91 89</td></tr>
       </table>
 
       <p class="clear" />
     </div>
 
     <div class="section">
-      <h2>skills</h2>
+      <h2>Skills</h2>
       <p class="cvjust">
         I am a generalist, full-stack web developer skilled
         in <em>JavaScript</em>, <em>Python</em> and <em>PHP</em>.  When writing
@@ -157,24 +155,29 @@ span.cvjust { text-align: justify; }
     </div>
 
     <div class="section">
-      <h2>work experience</h2>
+      <h2>Experience</h2>
 
       <div class="job">
         <div class="cvdate">January 2014 &mdash; present / <span class="cvfirm">
             <a href="https://followupboss.com">Follow Up Boss</a></span>
         </div>
-        <div class="cvfunc">Position held: Developer</div>
+        <div class="cvfunc">Position held: Developer, Security Officer</div>
 
         <p class="cvjust">
-          Follow Up Boss is a lead management application for real estate agents written
-          in PHP, using the Lithium framework.
+            Follow Up Boss is a lead management application for real estate agents written
+            in PHP, using the Lithium framework.
         </p>
         <p class="cvjust">
-          As a developer working on Follow Up Boss I am part of a small scrum team building
-          new features for the application.  Like most small web application development
-          teams everyone on the team also helps out with maintaining various parts of the
-          infrastructure, keeping up-to-date on security issues and doing customer
-          support.
+            As a developer working on Follow Up Boss I am part of a small scrum team building
+            new features for the application.  Like most small web application development
+            teams everyone on the team also helps out with maintaining various parts of the
+            infrastructure and doing customer support.
+        </p>
+        <p class="cvjust">
+            As the security officer for Follow Up Boss I am tasked to keep our and our
+            customer's data safe.  In this role I (among other tasks) establish,
+            advocate and enforce security policies and best practices among our team,
+            monitor security advisories, and investigate security issues.
         </p>
       </div>
 
@@ -232,7 +235,7 @@ span.cvjust { text-align: justify; }
         <div class="cvdate">May 2006 &mdash; January 2010 / <span class="cvfirm">
             <a href="http://www.cope.nl">COPE</a></span>
         </div>
-        <div class="cvfunc">Position held: Developer and System Administrator</div>
+        <div class="cvfunc">Position held: Developer, System Administrator</div>
 
         <p class="cvjust">
           COPE aims to provide insight into corporate data.  To this end, COPE has developed
@@ -317,9 +320,9 @@ span.cvjust { text-align: justify; }
       </div>
     </div>
 
-    <div class="section">
+    <div class="section outdated">
 
-      <h2>internships</h2>
+      <h2>Internships</h2>
 
       <div class="cvdate">February 2004 - June 2004 / <span class="cvfirm">Computer
           Vision Laboratory, Noordelijke Hogeschool Leeuwarden</span></div>
@@ -348,7 +351,7 @@ span.cvjust { text-align: justify; }
     </div>
 
     <div class="section">
-      <h2>education</h2>
+      <h2>Education</h2>
 
       <div class="cvdate">Sep 1999 - Jul 2004 / <span class="cvfirm">Noordelijke Hogeschool Leeuwarden</span></div>
       <div class="cvfunc">
@@ -369,12 +372,25 @@ span.cvjust { text-align: justify; }
     </div>
 
     <div class="section">
-      <h2>language proficiency</h2>
-      <ul>
-        <li><span class="cvspan">Native language: Frisian</span></li>
-        <li><span class="cvspan">Fluent in English and Dutch</span></li>
-      </ul>
-    </div>
+      <h2>Languages</h2>
 
+      <table class="languages">
+        <tr>
+          <td class="lang">Dutch</td>
+          <td class="level">Native speaker</td>
+          <td class="desc">Born and raised in the Netherlands</td>
+        </tr>
+        <tr>
+          <td class="lang">English</td>
+          <td class="level">Fluent</td>
+          <td class="desc">Grew up with english language saturday morning cartoons</td>
+        </tr>
+        <tr>
+          <td class="lang">Spanish</td>
+          <td class="level">Beginner</td>
+          <td class="desc">Living in Ecuador since 2014</td>
+        </tr>
+      </table>
+    </div>
   </body>
 </html>
