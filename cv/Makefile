@@ -1,9 +1,9 @@
 
 all: cv.json cv.private.pdf
 
-cv.json: cv.html docraptor.py
+cv.json: index.html docraptor.py
 	python ./docraptor.py
 
-cv.private.pdf: cv.html
+cv.private.pdf: index.html
 	/usr/bin/prince $< $@
 

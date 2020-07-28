@@ -1,9 +1,393 @@
 <html>
   <head>
-    <link rel="canonical" href="https://frob.nl/cv/cv.pdf">
-    <meta http-equiv="refresh" content="1; https://frob.nl/cv/cv.pdf" />
+    <title>Kuno Woudt, Curriculum Vitae</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.css">
+    <meta http-equiv="refresh" content="10" />
+    <style type="text/css">
+     @page {
+         size: A4;
+         margin: 2cm;
+         border: 0;
+         padding: 0;
+     }
+
+     div.home { display: none; }
+
+     body {
+         font-family: arial, sans-serif;
+         font-size: 10pt;
+         color: #000;
+         margin: 0;
+         border: 0;
+         padding: 0;
+     }
+
+     @media screen {
+         body { padding: 5em; }
+         div.home { display: block; float: left; text-align: left; }
+         div.personal { margin-top: 5em; }
+         .section { margin-left: 5em; width: 50em; text-align: left; }
+     }
+
+     .clearfix:before,
+     .clearfix:after { content: " "; display: table; }
+     .clearfix:after { clear: both; }
+
+     .menu-item {
+         display: block;
+         width: 100%;
+         padding: 10px 0;
+         margin: 0;
+         font-size: 14px;
+         text-align: center;
+         text-transform: uppercase;
+     }
+     .menu-item.selected { background: #ccc; float: right; }
+     .menu-item i {
+         padding-right: 16px;
+         display: inline-block;
+     }
+     .menu-item:hover { background: #ddd; }
+
+     p.clear, h1, h2, h3, h4 { clear: both; }
+     .outdated { display: none; }
+     .job { page-break-inside: avoid; }
+
+
+     .cvkuno, .cvtitle {
+         text-transform: uppercase;
+     }
+
+     .home, .cvkuno, .cvtitle {
+         font-weight: bolder;
+         margin: 0;
+         text-align: right;
+         font-size: 16pt;
+     }
+     .cvtitle { color: #444; font-size: 12pt; }
+     .home { color: #444; font-size: 12pt; }
+     span.cvsep { color: #000; }
+
+     table.left { float: left; }
+     table.right { margin-left: 10em; float: left; }
+     td { vertical-align: top; }
+     td:first-child { color: #444; padding-right: 1em; }
+
+     h2 {
+         font-size: 12pt;
+         font-weight: bolder;
+         margin: 2em 0 1em 0;
+         border-bottom: 1px solid #888;
+         text-transform: uppercase;
+     }
+     .cvdate { font-size: 10pt; font-weight: bolder; margin: 1em 0 0 0; }
+     .cvfunc { font-size: 10pt; font-weight: normal; margin: 0; color: #444; }
+
+     li { font-weight: normal; }
+     a { color: inherit; text-decoration: inherit; }
+     p { font-weight: normal; font-size: 10pt; }
+     p.cvjust { text-align: justify; }
+
+     em { font: inherit; font-weight: 600; }
+
+     span.cvspan { text-align: left; }
+     span.cvjust { text-align: justify; }
+
+     table.languages { width: 100%; }
+     table.languages td { font-size: 10pt; }
+     table.languages td.level { font-weight: bold; }
+     table.languages td.desc { text-align: right; font-style: italic; }
+
+     table.details { width: 100%; }
+     table.details td { font-size: 10pt; padding: 0.2em 0.2em 0.2em 0; }
+     table.details td.field { width: 5em; }
+
+    </style>
   </head>
   <body>
-    <p>Redirecting to <a href="https://frob.nl/cv/cv.pdf">https://frob.nl/cv/cv.pdf</a> ...</p>
+    <div class="section">
+      <div class="home">
+        <a href="https://frob.nl/">&lt; back to frob.nl</a>
+      </div>
+
+      <div class="cvkuno">Kuno Woudt</div>
+      <div class="cvtitle">Curriculum Vitae</div>
+
+      <h2>Personal details</h2>
+      <table class="left details">
+          <tr><td class="field">name</td>  <td class="value"><a href="https://frob.nl/#me">Jacobus Louis Woudt</a></td></tr>
+          <tr><td class="field">email</td> <td class="value">kuno@frob.nl</td></tr>
+          <tr><td class="field">github</td> <td class="value"><a href="https://github.com/warpr">warpr</a></td></tr>
+          <tr><td class="field">twitter</td> <td class="value"><a href="https://twitter.com/byld">@byld</a></td></tr>
+      </table>
+
+      <p class="clear" />
+    </div>
+
+    <div class="section">
+      <h2>Skills</h2>
+      <p class="cvjust">
+        I am a generalist, full-stack web developer skilled
+        in <em>JavaScript</em>, <em>Python</em> and <em>PHP</em>.  When writing
+        client-side javascript I prefer using modern technologies like <em>web components</em> or
+        Facebook's <em>React</em>, though have many years of experience using <em>jQuery</em>
+        and plain JavaScript. Server-side I have a good knowledge of python WSGI frameworks such
+        as <em>webob</em> and <em>werkzeug</em>/<em>flask</em>. For dealing with data I have a
+        thorough knowledge of <em>SQL</em>, but also enjoy working with NoSQL databases such
+        as <em>Redis</em> and <em>CouchDB</em> or extracting data from <em>XML</em>
+        using <em>XSLT</em>/<em>XPath</em>.
+      </p>
+      <p class="cvjust">
+        I prefer an environment where automated tests, continuous
+        deployment and distributed version control are used for
+        most projects.
+      </p>
+      <p class="cvjust">
+        In my spare time I am experimenting with Semantic Web
+        technologies (<em>Linked Data</em>, <em>RDF</em>) and
+        learning functional programming with <em>Haskell</em>.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>Experience</h2>
+
+      <div class="job">
+        <div class="cvdate">January 2014 &mdash; present / <span class="cvfirm">
+            <a href="https://followupboss.com">Follow Up Boss</a></span>
+        </div>
+        <div class="cvfunc">Position held: Senior Full Stack Engineer, Security Officer</div>
+
+        <p class="cvjust">
+          Follow Up Boss is a CRM for real estate agents written as a Single Page
+          Application talking to a REST API, with native mobile
+          apps for iPhone and Android using the same API.
+        </p>
+        <p class="cvjust">
+            As a developer working on Follow Up Boss I am part of a small team building
+            new features for the application.  Like many small web application development
+            teams everyone on the team also helps out maintaining our
+            infrastructure and doing customer support.
+        </p>
+        <p class="cvjust">
+            As the security officer for Follow Up Boss I am tasked to keep our and our
+            customer's data safe.  In this role I (among other tasks) establish,
+            advocate and enforce security policies and best practices among our team,
+            monitor security advisories, and investigate security issues.
+        </p>
+      </div>
+
+      <div class="job">
+        <div class="cvdate">August 2013 &mdash; January 2014 / <span class="cvfirm">
+            <a href="https://zestsoftware.nl">Zest Software</a></span>
+        </div>
+        <div class="cvfunc">Position held: Developer</div>
+
+        <p class="cvjust">
+          Zest Software develops informational websites, intranets and
+          web applications for knowledge-intensive organizations.
+        </p>
+        <p class="cvjust">
+          As a developer for Zest Software I was one of two developers
+          working on small websites built with Django, and large content
+          management applications built with Plone.
+        </p>
+      </div>
+
+      <div class="job">
+        <div class="cvdate">February 2010 &mdash; July 2013 / <span class="cvfirm">
+            <a href="https://metabrainz.org">MetaBrainz</a></span>
+        </div>
+        <div class="cvfunc">Position held: Developer</div>
+
+        <p class="cvjust">
+          MusicBrainz is a community-maintained open source
+          encyclopedia of music information.  It consists of a
+          website and webservice written in perl, and a fair
+          amount of javascript on some of the data entry screens.
+          The main site uses PostgreSQL as the back-end database
+          and a lucene based search server written in java.
+        </p>
+        <p class="cvjust">
+          As a contractor for MetaBrainz I was part of a team of
+          three paid developers and a large community of
+          volunteers.  I started during a time when we were doing
+          a full rewrite of the musicbrainz.org server software,
+          which went live on May 2011.  In the following two years
+          I've mostly worked on the musicbrainz.org server
+          software, working with our community of users and
+          clients to fix bugs as they get reported and add
+          features.
+        </p>
+        <p class="cvjust">
+          As part of a small team of developers with no system
+          administrators, I was also responsible for maintaining
+          various bits of infrastructure, most importantly nagios
+          monitoring of our servers.
+        </p>
+      </div>
+
+      <div class="job">
+        <div class="cvdate">May 2006 &mdash; January 2010 / <span class="cvfirm">
+            <a href="http://www.cope.nl">COPE</a></span>
+        </div>
+        <div class="cvfunc">Position held: Developer, System Administrator</div>
+
+        <p class="cvjust">
+          COPE aims to provide insight into corporate data.  To this end, COPE has developed
+          a generic online survey tool and a tool for 360 degree feedback assessments.
+          Technologies used are mainly PHP and MySQL, with XML/XSLT used as a template
+          language both for screen (HTML/CSS) and paper (PDF, Prince XML). My role at COPE
+          was to develop new features for these two products.  I was the maintainer of the
+          survey tool codebase.
+        </p>
+        <p class="cvjust">
+          In addition to being a developer, I was also a network and system
+          administrator for a number of machines in a growing network of
+          physical and virtual machines, both colocated production servers
+          and development servers at our office.  These mainly run Debian
+          GNU/Linux, with apache, php, mysql, and other services.
+        </p>
+      </div>
+
+      <div class="job outdated">
+        <div class="cvdate">Sep 2005 - Apr 2006 / <span class="cvfirm">
+            <a href="http://www.4p-it.nl">4P-IT</a></span></div>
+        <div class="cvfunc">Position held: System Administrator</div>
+
+        <p class="cvjust">
+          Implementation and administration of a broad range of windows based
+          networks at our clients.
+        </p>
+      </div>
+
+      <div class="job outdated">
+        <div class="cvdate">Sep 2004 - Sep 2005 / <span class="cvfirm">
+            <a href="http://www.csg-comenius.nl">CSG Comenius Leeuwarden</a></span></div>
+        <div class="cvfunc">Position held: System Administrator</div>
+
+        <p class="cvjust">
+          Administration of the network consisting of Windows 2000/2003 servers,
+          including Exchange 2003 for mail and both IIS and Apache for
+          various webservers.
+        </p>
+      </div>
+
+      <div class="job outdated">
+        <div class="cvdate">Aug 2004 / <span class="cvfirm">UPC Nederland</span></div>
+        <div class="cvfunc">Position held: Helpdesk/Technical Support agent</div>
+
+        <p class="cvjust">
+          Providing technical support to clients of a large cable internet provider.
+        </p>
+      </div>
+
+      <div class="job outdated">
+        <div class="cvdate">June 2003 - July 2003 / <span class="cvfirm">CSG
+            Comenius Leeuwarden</span></div>
+        <div class="cvfunc">Position held: System Administrator</div>
+
+        <p class="cvjust">
+          Migrating a Windows NT 4 sever and a Linux mail server
+          to several Windows 2000 Servers operating with Active
+          Directory and Exchange 2000.
+        </p>
+      </div>
+
+      <div class="job outdated">
+        <div class="cvdate">Dec 1999 - Aug 2001 / <span class="cvfirm">Christelijk
+            Gymnasium Beyers Naudé</span></div>
+        <div class="cvfunc">Position held: System Administrator (0,2 fte)</div>
+
+        <p class="cvjust">Administration of the network consisting of
+          a Linux firewall/router and approx. 25 Windows 98 clients.</p>
+      </div>
+
+      <div class="job outdated">
+        <div class="cvdate">July 1998 - December 1998 / <span class="cvfirm">CSG
+            Comenius Leeuwarden</span></div>
+        <div class="cvfunc">Position held: System Administrator</div>
+
+        <p class="cvjust">
+          Roll out of Windows NT4 based networks at three different locations.
+          The network at each location consisted of a single NT4 server and
+          approx. 20 windows 98 clients.
+        </p>
+      </div>
+    </div>
+
+    <div class="section outdated">
+
+      <h2>Internships</h2>
+
+      <div class="cvdate">February 2004 - June 2004 / <span class="cvfirm">Computer
+          Vision Laboratory, Noordelijke Hogeschool Leeuwarden</span></div>
+      <div class="cvfunc">Graduation project</div>
+
+      <p class="cvjust">
+        Research and implementation of realtime motion detection and
+        estimation for video games.  Various game prototypes and a
+        final game were developed using C# and Managed DirectX 9. The
+        motion detection algorithms were
+        implemented in C++, as part of an in-house vision library.
+      </p>
+
+      <div class="cvdate">September 2001 - January 2002 / <span class="cvfirm">
+          Compiler Technology, Philips Research Laboratories Eindhoven</span>
+      </div>
+      <div class="cvfunc">internship</div>
+      <p class="cvjust">
+        Add support for Very Long Instruction Word CPUs to a generic
+        cpu emulator written in Java.  The goal of this project was to
+        add support support for a NXP/Philips TriMedia CPU, while
+        keeping the code general enough so other VLIW CPUs can be
+        added later.
+      </p>
+
+    </div>
+
+    <div class="section">
+      <h2>Education</h2>
+
+      <div class="cvdate">Sep 1999 - Jul 2004 / <span class="cvfirm">Noordelijke Hogeschool Leeuwarden</span></div>
+      <div class="cvfunc">
+        Bachelor of Engineering, Informatica (Computer Science)
+      </div>
+
+      <div class="outdated cvdate">Aug 1997 - Jul 1998 / <span class="cvfirm">Hogeschool Enschede</span></div>
+      <div class="outdated cvfunc">
+        Computertechniek (no degree)
+      </div>
+
+      <div class="cvdate">Aug 1992 - Jul 1997 / <span class="cvfirm">MBO College De Friese Poort,
+          Sneek</span></div>
+      <div class="cvfunc">
+        Diploma Elektronica/Telematica
+        (senior secondary vocational education, degree in electronics/telematics)
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Languages</h2>
+
+      <table class="languages">
+        <tr>
+          <td class="lang">Dutch</td>
+          <td class="level">Native speaker</td>
+          <td class="desc">Born and raised in the Netherlands</td>
+        </tr>
+        <tr>
+          <td class="lang">English</td>
+          <td class="level">Fluent</td>
+          <td class="desc">Grew up with english language saturday morning cartoons</td>
+        </tr>
+        <tr>
+          <td class="lang">Spanish</td>
+          <td class="level">Conversational</td>
+          <td class="desc">Living in Ecuador since 2014</td>
+        </tr>
+      </table>
+    </div>
   </body>
 </html>
