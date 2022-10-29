@@ -21,7 +21,8 @@
              "url": "https://frob.nl",
              "sameAs": [
                  "https://twitter.com/byld",
-                 "https://keybase.io/kuno/"
+                 "https://keybase.io/kuno/",
+                 "https://phpc.social/@kuno",
              ]
          }
         </script>
@@ -124,14 +125,14 @@
          /* contact block */
          section.contact ul { padding: 4px 0; list-style: none; }
          section.contact li { padding: 8px 4px; font-size: 18px; line-height: 18px; }
+         section.contact li i.fa-brands,
          section.contact li i.fa { width: 30px; font-size: 24px; }
          iframe { vertical-align: bottom; }
          h1, p.big { text-transform: uppercase; }
          h1 { letter-spacing: -1px; }
 
         </style>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/v4-shims.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/2.1.1/luxon.min.js"></script>
         <script>
             class kuno_time extends HTMLElement {
@@ -156,9 +157,10 @@
                         I'm a full-stack web developer from Rotterdam, now living in Guayaquil.
                     </p>
                     <div class="icons">
-                        <span><a target="_blank" href="https://frob.nl/cv/" title="Résumé"><i class="fa fa-file-alt"></i></a></span>
-                        <span><a target="_blank" href="https://twitter.com/byld/" title="@byld"><i class="fa fa-twitter"></i></a></span>
-                        <span><a target="_blank" href="https://github.com/warpr/"><i class="fa fa-github"></i></a></span>
+                      <span><a target="_blank" href="https://frob.nl/cv/" title="Résumé"><i class="fa fa-file-alt"></i></a></span>
+                      <span><a rel="me" href="https://phpc.social/@kuno" title="@kuno@phpc.social"><i class="fab fa-brands fa-mastodon"></i></a></span>
+                      <span><a target="_blank" href="https://twitter.com/byld/" title="@byld"><i class="fab fa-brands fa-twitter"></i></a></span>
+                      <span><a target="_blank" href="https://github.com/warpr/"><i class="fab fa-brands fa-github"></i></a></span>
                     </div>
                 </section>
 
@@ -171,7 +173,7 @@
                     <div>
                         <ul class="icons">
                             <li>
-                                <i class="fa fa-clock-o"></i>
+                                <i class="fa fa-clock"></i>
                                 <a target="_blank" href="http://time.is/Guayaquil">
                                     <kuno-time></kuno-time>
                                 </a>
@@ -192,7 +194,7 @@
                     </h1>
                     <div>
                         <p>
-                            Copyright 2002&ndash;2021 Kuno Woudt.
+                            Copyright 2002&ndash;2022 Kuno Woudt.
                         </p>
                         <p>
                             Icons from <a target="_blank" href="http://fontawesome.io">Font Awesome</a> by Dave Gandy.
