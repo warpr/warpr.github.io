@@ -132,13 +132,19 @@
          h1 { letter-spacing: -1px; }
 
         </style>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/2.1.1/luxon.min.js"></script>
         <script>
+          function right_now() {
+              return luxon.DateTime.now().setZone('America/Guayaquil').toLocaleString(luxon.DateTime.TIME_24_WITH_SECONDS) + ' UTC-5';
+          }
+
             class kuno_time extends HTMLElement {
                 connectedCallback() {
+                    this.innerText = right_now();
+
                     setInterval(() => {
-                        this.innerText = luxon.DateTime.now().setZone('America/Guayaquil').toLocaleString(luxon.DateTime.TIME_24_WITH_SECONDS) + ' UTC-5';
+                        this.innerText = right_now();
                     }, 1000);
                 }
             }
@@ -159,8 +165,8 @@
                     <div class="icons">
                       <span><a target="_blank" href="https://frob.nl/cv/" title="Résumé"><i class="fa fa-file-alt"></i></a></span>
                       <span><a target="_blank" href="https://github.com/warpr/"><i class="fab fa-brands fa-github"></i></a></span>
-                      <span><a target="_blank" href="https://bsky.app/profile/kuno.app" title="@kuno.app"><i class="fas fa-square"></i></a></span>
-                      <span><a rel="me" href="https://phpc.social/@kuno" title="@kuno@phpc.social"><i class="fab fa-brands fa-mastodon"></i></a></span>
+                      <span><a target="_blank" href="https://bsky.app/profile/kuno.app" title="@kuno.app"><i class="fa-brands fa-bluesky"></i></a></span>
+                      <span><a target="_blank" href="https://phpc.social/@kuno" title="@kuno@phpc.social"><i class="fab fa-brands fa-mastodon"></i></a></span>
                       <span><a target="_blank" href="https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=ad9f64cd2d4a17f0d5ecf04d38170fdc34f21c61">&nbsp;</a></span>
                     </div>
                 </section>
@@ -195,7 +201,7 @@
                     </h1>
                     <div>
                         <p>
-                            Copyright 2002&ndash;2022 Kuno Woudt.
+                            Copyright 2002&ndash;2024 Kuno Woudt.
                         </p>
                         <p>
                             Icons from <a target="_blank" href="http://fontawesome.io">Font Awesome</a> by Dave Gandy.
