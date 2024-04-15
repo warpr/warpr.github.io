@@ -5,18 +5,14 @@
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.2/css/font-awesome.css">
     <meta http-equiv="refresh" content="10" />
     <style type="text/css">
-     @page {
-         size: A4;
-         margin: 2cm;
-         border: 0;
-         padding: 0;
-     }
-
      div.home { display: none; }
+
+     html {
+         font-size: 12pt;
+     }
 
      body {
          font-family: arial, sans-serif;
-         font-size: 10pt;
          color: #000;
          margin: 0;
          border: 0;
@@ -30,6 +26,14 @@
          .section { margin-left: 5em; width: 50em; text-align: left; }
      }
 
+     @media print {
+         body {
+             margin: 2cm;
+             border: 0;
+             padding: 0;
+         }
+     }
+
      .clearfix:before,
      .clearfix:after { content: " "; display: table; }
      .clearfix:after { clear: both; }
@@ -39,7 +43,7 @@
          width: 100%;
          padding: 10px 0;
          margin: 0;
-         font-size: 14px;
+         font-size: 0.875rem;
          text-align: center;
          text-transform: uppercase;
      }
@@ -63,10 +67,10 @@
          font-weight: bolder;
          margin: 0;
          text-align: right;
-         font-size: 16pt;
+         font-size: 1.6rem;
      }
-     .cvtitle { color: #444; font-size: 12pt; }
-     .home { color: #444; font-size: 12pt; }
+     .cvtitle { color: #444; font-size: 1.2rem; }
+     .home { color: #444; font-size: 1.2rem; }
      span.cvsep { color: #000; }
 
      table.left { float: left; }
@@ -75,18 +79,18 @@
      td:first-child { color: #444; padding-right: 1em; }
 
      h2 {
-         font-size: 12pt;
+         font-size: 1.2rem;
          font-weight: bolder;
          margin: 2em 0 1em 0;
          border-bottom: 1px solid #888;
          text-transform: uppercase;
      }
-     .cvdate { font-size: 10pt; font-weight: bolder; margin: 1em 0 0 0; }
-     .cvfunc { font-size: 10pt; font-weight: normal; margin: 0; color: #444; }
+     .cvdate { font-size: 1rem; font-weight: bolder; margin: 1em 0 0 0; }
+     .cvfunc { font-size: 1rem; font-weight: normal; margin: 0; color: #444; }
 
      li { font-weight: normal; }
      a { color: inherit; text-decoration: inherit; }
-     p { font-weight: normal; font-size: 10pt; }
+     p { font-weight: normal; font-size: 1rem; }
      p.cvjust { text-align: justify; }
 
      em { font: inherit; font-weight: 600; }
@@ -95,12 +99,12 @@
      span.cvjust { text-align: justify; }
 
      table.languages { width: 100%; }
-     table.languages td { font-size: 10pt; }
+     table.languages td { font-size: 1rem; }
      table.languages td.level { font-weight: bold; }
      table.languages td.desc { text-align: right; font-style: italic; }
 
      table.details { width: 100%; }
-     table.details td { font-size: 10pt; padding: 0.2em 0.2em 0.2em 0; }
+     table.details td { font-size: 1rem; padding: 0.2em 0.2em 0.2em 0; }
      table.details td.field { width: 5em; }
 
     </style>
@@ -119,7 +123,6 @@
           <tr><td class="field">name</td>  <td class="value"><a href="https://frob.nl/#me">Kuno Woudt</a></td></tr>
           <tr><td class="field">email</td> <td class="value">kuno@frob.nl</td></tr>
           <tr><td class="field">github</td> <td class="value"><a href="https://github.com/warpr">warpr</a></td></tr>
-          <tr><td class="field">twitter</td> <td class="value"><a href="https://twitter.com/byld">@byld</a></td></tr>
       </table>
 
       <p class="clear" />
@@ -138,10 +141,9 @@
       </p>
       <p class="cvjust">
         In my spare time I am tinkering with embedded devices (esp32, rp2040,
-        arduino), e.g. writing little bits of firmware for mechanical keyboards.  I
-        used to be very proficient in C, but it's not a modern language and shouldn't
-        be used for most new projects, so I am learning Rust for these types of
-        applications.
+        arduino), e.g. writing little bits of firmware for mechanical keyboards.
+        I used to be proficient in C, but haven't used it much recently and I
+        am learning <em>Rust</em> for these types of applications.
       </p>
     </div>
 
